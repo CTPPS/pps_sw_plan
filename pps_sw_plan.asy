@@ -41,7 +41,7 @@ AddTask("g13", "interprete DD4Hep values with DD4Hep units", ass="Gabrielle", pr
 //----------------------------------------
 AddCategory("optimisations");
 
-AddTask("opt1", "systematic use of edm::DetSetVector::emplace\_back", pri="low", ass="Laurent", resp="Jan", stat="prepare", comments="
+AddTask("opt1", "systematic use of edm::DetSetVector::emplace\_back", ass="Laurent", resp="Jan", stat="merged", pr="32572", comments="
 cf. https://github.com/cms-sw/cmssw/pull/26069
 ");
 
@@ -67,7 +67,7 @@ AddTask("ds4", "backport to 10\_6", ass="?", stat="pending", dep=deps("ds2", "ds
 //----------------------------------------
 AddCategory("DQM");
 
-AddTask("dqm1", "pixels -- innocent bug fix", pri="low", ass="Andrea", cons="Fabrizio", resp="Jan", stat="pending", comments="
+AddTask("dqm1", "pixels -- innocent bug fix", pri="low", ass="Andrea", cons="Fabrizio", resp="Jan", stat="ongoing", pr="32584", comments="
 NROCsMAX instead of NplaneMAX \ulink{https://github.com/cms-sw/cmssw/blob/ae40f9f461ab323a25c798728e99fbdfea645e1a/DQM/CTPPS/plugins/CTPPSPixelDQMSource.cc#L736}{here}
 ");
 

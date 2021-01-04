@@ -197,9 +197,9 @@ void PlotItems()
 		{
 			pen p = gray;
 			if (it.status == "pending") p = red;
-			if (it.status == "prepare") p = 0.7*orange + 0.3*yellow;
-			if (it.status == "ongoing") p = yellow;
-			if (it.status == "done") p = green;
+			if (it.status == "prepare" || it.status == "preparing" || it.status == "prep") p = 0.7*orange + 0.3*yellow;
+			if (it.status == "ongoing" || it.status == "open") p = yellow;
+			if (it.status == "done" || it.status == "merged") p = green;
 
 			filldraw((x0+it.xl, it.yb)--(x0+it.xr, it.yb)--(x0+it.xr, it.yt)--(x0+it.xl, it.yt)--cycle, p, black+0.1pt);
 
