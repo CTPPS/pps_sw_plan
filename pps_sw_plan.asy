@@ -7,7 +7,7 @@ import code;
 AddCategory("geometry");
 AddTask("g3", "update of diamond geometry for Run3", ass="Laurent", stat="done", pr="31484", dep=deps());
 
-AddTask("g4", "fix z sign of diamonds", ass="Jan", cons="", resp="Fabrizio", stat="pending", dep=deps("g3"), comments="
+AddTask("g4", "fix z sign of diamonds", ass="Jan", cons="", resp="", stat="open", dep=deps("g3"), pr="32603", comments="
 LHC sector 45 should have z negative etc.\\
  * for Run3: correct z sign already in XML files\\
  * for Run2: z sign corrected in geometry builder\\
@@ -33,7 +33,7 @@ AddTask("g12", "check compatibility of scoring plane z", ass="Jan", resp="Fabriz
 the same z should be used by strip RPs, pixel RPs and optics
 ");
 
-AddTask("g13", "interprete DD4Hep values with DD4Hep units", ass="Gabrielle", pr="32538", stat="ongoing");
+AddTask("g13", "interprete DD4Hep values with DD4Hep units", ass="Gabrielle", resp="-",  pr="32538", stat="ongoing");
 
 //----------------------------------------
 //AddCategory("config");
@@ -56,7 +56,9 @@ AddCategory("direct simulation");
 
 AddTask("ds0", "per-year simulation with distributed conditions", ass="Chris, Jan", stat="done", pr="32207", dep=deps());
 
-AddTask("ds1", "2021 profile", ass="Jan", resp="Antonio, Ksenia", stat="prepare", dep=deps("g3"));
+AddTask("ds1", "2021 profile", ass="Jan", resp="Antonio, Ksenia", stat="open", dep=deps("g3"), pr="32602", comments="
+adds also a default RP-position file with reasonable RP-beam distances (2mm for horizontal and 7mm for vertical RPs)
+");
 
 AddTask("ds2", "tracking-RP efficiency", ass="Jan", resp="Valentina", stat="prepare", dep=deps("ds0"));
 
@@ -67,7 +69,7 @@ AddTask("ds4", "backport to 10\_6", ass="?", stat="pending", dep=deps("ds2", "ds
 //----------------------------------------
 AddCategory("DQM");
 
-AddTask("dqm1", "pixels -- innocent bug fix", pri="low", ass="Andrea", cons="Fabrizio", resp="Jan", stat="ongoing", pr="32584", comments="
+AddTask("dqm1", "pixels -- innocent bug fix", pri="low", ass="Andrea", cons="Fabrizio", resp="Jan", stat="merged", pr="32584", comments="
 NROCsMAX instead of NplaneMAX \ulink{https://github.com/cms-sw/cmssw/blob/ae40f9f461ab323a25c798728e99fbdfea645e1a/DQM/CTPPS/plugins/CTPPSPixelDQMSource.cc#L736}{here}
 ");
 
@@ -83,7 +85,7 @@ extract harvesting code to harverster modules
 //----------------------------------------
 AddCategory("PCLs");
 
-AddTask("pcl1", "timing calibration", ass="Laurent", cons="?", resp="Valentina", stat="prepare");
+AddTask("pcl1", "timing calibration", ass="Laurent", cons="-", resp="Valentina", stat="prepare");
 AddTask("pcl2", "alignment", ass="Mateusz?", cons="Jan", resp="Valentina", stat="pending");
 
 //----------------------------------------
@@ -100,6 +102,11 @@ by default, this would be disabled, but available for private use
 
 //----------------------------------------
 //AddCategory("filters");
+
+//----------------------------------------
+AddCategory("framework");
+
+AddTask("fwk1", "thread-safe ES data retrieval in all PPS code", ass="Laurent", resp="Jan", stat="prep", dep=deps());
 
 
 MakePlot();
