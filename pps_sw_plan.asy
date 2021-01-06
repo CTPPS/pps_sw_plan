@@ -33,7 +33,7 @@ AddTask("g12", "check compatibility of scoring plane z", ass="Jan", resp="Fabriz
 the same z should be used by strip RPs, pixel RPs and optics
 ");
 
-AddTask("g13", "interprete DD4Hep values with DD4Hep units", ass="Gabrielle", resp="-",  pr="32538", stat="ongoing");
+AddTask("g13", "interprete DD4Hep values with DD4Hep units", ass="Gabrielle", resp="-",  pr="32538", stat="merged");
 
 //----------------------------------------
 //AddCategory("config");
@@ -56,15 +56,15 @@ AddCategory("direct simulation");
 
 AddTask("ds0", "per-year simulation with distributed conditions", ass="Chris, Jan", stat="done", pr="32207", dep=deps());
 
-AddTask("ds1", "2021 profile", ass="Jan", resp="Antonio, Ksenia", stat="open", dep=deps("g3"), pr="32602", comments="
+AddTask("ds1", "2021 profile", ass="Jan", resp="", stat="open", dep=deps("g3"), pr="32602", comments="
 adds also a default RP-position file with reasonable RP-beam distances (2mm for horizontal and 7mm for vertical RPs)
 ");
 
-AddTask("ds2", "tracking-RP efficiency", ass="Jan", resp="Valentina", stat="prepare", dep=deps("ds0"));
+AddTask("ds2", "tracking-RP efficiency", ass="Jan", resp="Valentina", stat="prepare", dep=deps("ds0", "g4"));
 
 AddTask("ds3", "use cloning in cff files", pri="high", ass="Laurent", resp="Jan", stat="prepare", dep=deps("g3"));
 
-AddTask("ds4", "backport to 10\_6", ass="?", stat="pending", dep=deps("ds2", "ds3"));
+AddTask("ds4", "backport to 10\_6", ass="Jan", stat="pending", dep=deps("ds2", "ds3"));
 
 //----------------------------------------
 AddCategory("DQM");
@@ -100,13 +100,15 @@ idea: run ``direct'' simu during nanoAOD production\\
 by default, this would be disabled, but available for private use
 ");
 
+AddTask("na3", "backport of \#31531 to 10\_6", pri="high", ass="Justin?", cons="Jan", resp="Antonio, Ksenia", stat="pending", dep=deps("na1"), comments="");
+
 //----------------------------------------
 //AddCategory("filters");
 
 //----------------------------------------
 AddCategory("framework");
 
-AddTask("fwk1", "thread-safe ES data retrieval in all PPS code", ass="Laurent", resp="Jan", stat="prep", dep=deps());
+AddTask("fwk1", "thread-safe ES data retrieval in all PPS code", ass="Laurent", resp="Jan", stat="open", pr="32606", dep=deps());
 
 
 MakePlot();
