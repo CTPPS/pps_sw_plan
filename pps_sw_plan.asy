@@ -102,7 +102,7 @@ idea: run ``direct'' simu during nanoAOD production\\
 by default, this would be disabled, but available for private use
 ");
 
-AddTask("na3", "backport of \#31531 to 10\_6", pri="high", ass="Justin?", cons="Jan", resp="Antonio, Ksenia", stat="pending", due="Jan 2021", dep=deps("na1"), comments="");
+AddTask("na3", "backport of \#31531 to 10\_6", pri="high", ass="Justin", cons="", resp="Antonio, Ksenia", stat="open", pr="32616", dep=deps("na1"), comments="");
 
 //----------------------------------------
 //AddCategory("filters");
@@ -110,7 +110,7 @@ AddTask("na3", "backport of \#31531 to 10\_6", pri="high", ass="Justin?", cons="
 //----------------------------------------
 AddCategory("framework");
 
-AddTask("fwk1", "thread-safe ES data retrieval in all PPS code", ass="Laurent", resp="Jan", stat="open", pr="32606", dep=deps());
+AddTask("fwk1", "thread-safe ES data retrieval in all PPS code", ass="Laurent", resp="Jan", stat="merged", pr="32606", dep=deps());
 
 
 MakePlot();
