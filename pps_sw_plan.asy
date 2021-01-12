@@ -56,6 +56,8 @@ AddCategory("direct simulation");
 
 AddTask("ds0", "per-year simulation with distributed conditions", ass="Chris, Jan", stat="done", pr="32207", dep=deps());
 
+AddTask("ds5", "fix in CTPPSCompositeESSource", ass="Jan", stat="open", pr="32640", dep=deps("ds0"));
+
 AddTask("ds1", "2021 profile", ass="Jan", resp="", stat="merged", dep=deps("g3"), pr="32602", comments="
 adds also a default RP-position file with reasonable RP-beam distances (2mm for horizontal and 7mm for vertical RPs)
 ");
@@ -66,7 +68,7 @@ AddTask("ds3", "use cloning in cff files", pri="high", ass="Laurent", resp="Jan"
 to address \ulink{https://github.com/cms-sw/cmssw/issues/32448}{issue \#32448}
 "); // depends on ds1 since the 2021 configs will need updating
 
-AddTask("ds4", "backport to 10\_6", ass="Jan", stat="pending", due="", dep=deps("ds2", "ds3"));
+AddTask("ds4", "backport to 10\_6", ass="Jan", stat="pending", due="", dep=deps("ds2", "ds3", "ds5"));
 
 //----------------------------------------
 AddCategory("DQM");
