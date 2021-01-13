@@ -62,13 +62,13 @@ AddTask("ds1", "2021 profile", ass="Jan", resp="", stat="merged", dep=deps("g3")
 adds also a default RP-position file with reasonable RP-beam distances (2mm for horizontal and 7mm for vertical RPs)
 ");
 
-AddTask("ds2", "tracking-RP efficiency", ass="Jan", resp="Valentina", stat="prepare", dep=deps("ds0", "g4"));
+AddTask("ds2", "tracking-RP efficiency", ass="Jan", resp="DPG", stat="prepare", due="Jan 2021", dep=deps("ds0", "g4"));
 
-AddTask("ds3", "use cloning in cff files", pri="high", ass="Laurent", resp="Jan", stat="prepare", dep=deps("g3", "ds1"), comments="
+AddTask("ds3", "use cloning in cff files", pri="high", ass="Laurent", resp="Jan", stat="prepare", due="Jan 2021", dep=deps("g3", "ds1"), comments="
 to address \ulink{https://github.com/cms-sw/cmssw/issues/32448}{issue \#32448}
 "); // depends on ds1 since the 2021 configs will need updating
 
-AddTask("ds4", "backport to 10\_6", ass="Jan", stat="pending", due="", dep=deps("ds2", "ds3", "ds5"));
+AddTask("ds4", "backport to 10\_6", ass="Jan", stat="pending", due="Jan 2021", dep=deps("ds2", "ds3", "ds5"));
 
 //----------------------------------------
 AddCategory("DQM");
@@ -77,9 +77,9 @@ AddTask("dqm1", "pixels -- innocent bug fix", ass="Andrea", cons="Fabrizio", res
 NROCsMAX instead of NplaneMAX \ulink{https://github.com/cms-sw/cmssw/blob/ae40f9f461ab323a25c798728e99fbdfea645e1a/DQM/CTPPS/plugins/CTPPSPixelDQMSource.cc#L736}{here}
 ");
 
-AddTask("dqm2", "timing RPs -- add new Run3 RPs", ass="Laurent", resp="Valentina", stat="prep", dep=deps("g3"));
+AddTask("dqm2", "timing RPs -- add new Run3 RPs", ass="Laurent", resp="DPG", stat="prep", dep=deps("g3"));
 
-AddTask("dqm3", "timing RPs -- other possible tasks", ass="?", stat="pending", comments="
+AddTask("dqm3", "timing RPs -- other possible tasks", ass="?", resp="DPG", stat="pending", comments="
 config flags to enable/disable plots for online/offline DQM,
 acquisition window size steered with a run-time parameter,\\
 TotemTimingDQMSource adapted for SAMPIC,
@@ -89,22 +89,22 @@ extract harvesting code to harverster modules
 //----------------------------------------
 AddCategory("PCLs");
 
-AddTask("pcl1", "timing calibration", ass="Laurent", cons="-", resp="Valentina", stat="prepare");
-AddTask("pcl2", "alignment", ass="Mateusz?", cons="Jan", resp="Valentina", stat="pending");
+AddTask("pcl1", "timing calibration", ass="Laurent", cons="DB", resp="DPG", stat="prepare");
+AddTask("pcl2", "alignment", ass="Mateusz?", cons="Jan, DB", resp="DPG", stat="pending");
 
 //----------------------------------------
 AddCategory("nanoAOD");
 
-AddTask("na1", "reco tracks and protons in nanoAOD", ass="Justin", cons="Jan", resp="Antonio, Ksenia", stat="done", pr="31531", dep=deps(), comments="
+AddTask("na1", "reco tracks and protons in nanoAOD", ass="Justin", cons="Jan", resp="POG", stat="done", pr="31531", dep=deps(), comments="
 Includes filter module to apply POG quality recommendations
 ");
 
-AddTask("na2", "simu tracks and protons in nanoAOD", ass="Justin?", cons="Jan", resp="Antonio, Ksenia", stat="pending", dep=deps("na1"), comments="
+AddTask("na2", "simu tracks and protons in nanoAOD", ass="Justin?", cons="Jan", resp="POG", stat="pending", dep=deps("na1"), comments="
 idea: run ``direct'' simu during nanoAOD production\\
 by default, this would be disabled, but available for private use
 ");
 
-AddTask("na3", "backport of \#31531 to 10\_6", pri="high", ass="Justin", cons="", resp="Antonio, Ksenia", stat="open", pr="32616", dep=deps("na1"), comments="");
+AddTask("na3", "backport of \#31531 to 10\_6", pri="high", ass="Justin", cons="", resp="POG", stat="open", pr="32616", dep=deps("na1"), comments="");
 
 //----------------------------------------
 //AddCategory("filters");
