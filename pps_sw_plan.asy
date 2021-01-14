@@ -27,6 +27,8 @@ AddTask("g12", "check compatibility of scoring plane z", ass="Jan", resp="Fabriz
 the same z should be used by strip RPs, pixel RPs and optics
 ");
 
+AddTask("g13", "recognise volume names in simu", ass="Carl Vuosalo", resp="", stat="merged", pr="32667", comments="");
+
 //----------------------------------------
 //AddCategory("config");
 
@@ -42,9 +44,9 @@ the same z should be used by strip RPs, pixel RPs and optics
 //----------------------------------------
 AddCategory("direct simulation");
 
-AddTask("ds5", "fix in CTPPSCompositeESSource", ass="Jan", stat="open", pr="32640", dep=deps());
+AddTask("ds5", "fix in CTPPSCompositeESSource", ass="Jan", stat="merged", pr="32640", dep=deps());
 
-AddTask("ds2", "tracking-RP efficiency", ass="Jan", resp="DPG", stat="prepare", due="Jan 2021", dep=deps());
+AddTask("ds2", "tracking-RP efficiency", ass="Jan", cons="Andrea", resp="DPG", stat="prepare", due="Jan 2021", dep=deps());
 
 AddTask("ds3", "use cloning in cff files", pri="high", ass="Laurent", resp="Jan", stat="prepare", due="Jan 2021", dep=deps(), comments="
 to address \ulink{https://github.com/cms-sw/cmssw/issues/32448}{issue \#32448}
@@ -84,7 +86,11 @@ AddTask("na3", "backport of \#31531 to 10\_6", pri="high", ass="Justin", cons=""
 //AddCategory("filters");
 
 //----------------------------------------
-//AddCategory("framework");
+AddCategory("other");
 
+AddTask("ot1", "standardised code for simu + PU event merging", ass="Andrea?", resp="POG", stat="pending", dep=deps(), comments="
+code for standard PPS procedure of mixing simu signal with PU from unrelated real LHC events;
+mixing on digi or rec-hit level?
+");
 
 MakePlot();
