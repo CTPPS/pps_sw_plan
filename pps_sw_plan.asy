@@ -29,7 +29,7 @@ AddTask("g2", "remove geometry specs from reco cff files", ass="?", stat="pendin
 
 AddTask("g9", "pre-processed geometry to DB -- updated for Run3", ass="Wagner", resp="Fabrizio", stat="pending", dep=deps("g7", "g8"));
 
-AddTask("g12", "check compatibility of scoring plane z", ass="Jan", resp="Fabrizio", stat="pending", due="Jan 2021", comments="
+AddTask("g12", "check compatibility of scoring plane z", pri="low", ass="Jan", resp="Fabrizio", stat="pending", due="Feb 2021", comments="
 the same z should be used by strip RPs, pixel RPs and optics
 ");
 
@@ -64,13 +64,13 @@ AddTask("ds1", "2021 profile", ass="Jan", resp="", stat="merged", dep=deps("g3")
 adds also a default RP-position file with reasonable RP-beam distances (2mm for horizontal and 7mm for vertical RPs)
 ");
 
-AddTask("ds2", "tracking-RP efficiency", ass="Jan", cons="Andrea", resp="DPG", stat="prepare", due="Jan 2021", dep=deps("ds0", "g4"));
+AddTask("ds2", "tracking-RP efficiency", ass="Jan", cons="Andrea", resp="DPG", stat="prepare", due="Feb 2021", dep=deps("ds0", "g4"));
 
-AddTask("ds3", "use cloning in cff files", pri="high", ass="Laurent", resp="Jan", stat="prepare", due="Jan 2021", dep=deps("g3", "ds1"), comments="
+AddTask("ds3", "use cloning in cff files", pri="high", ass="Laurent", resp="Jan", stat="prepare", due="Feb 2021", dep=deps("g3", "ds1"), comments="
 to address \ulink{https://github.com/cms-sw/cmssw/issues/32448}{issue \#32448}
 "); // depends on ds1 since the 2021 configs will need updating
 
-AddTask("ds4", "backport to 10\_6", ass="Jan", stat="pending", due="Jan 2021", dep=deps("ds2", "ds3", "ds5"));
+AddTask("ds4", "backport to 10\_6", ass="Jan", stat="pending", due="Feb 2021", dep=deps("ds2", "ds3", "ds5"));
 
 //----------------------------------------
 AddCategory("DQM");
@@ -106,7 +106,7 @@ idea: run ``direct'' simu during nanoAOD production\\
 by default, this would be disabled, but available for private use
 ");
 
-AddTask("na3", "backport of \#31531 to 10\_6", pri="high", ass="Justin", cons="", resp="POG", stat="merged", pr="32616", dep=deps("na1"), comments="");
+AddTask("na3", "backport of \#31531 to 10\_6", pri="", ass="Justin", cons="", resp="POG", stat="merged", pr="32616", dep=deps("na1"), comments="");
 
 //----------------------------------------
 //AddCategory("filters");
