@@ -14,18 +14,18 @@ LHC sector 45 should have z negative etc.\\
 Remove sign fixing from: proton reco, direct simu
 ");
 
-AddTask("g5", "fix overlaps of diamonds", ass="?", stat="pending", dep=deps("g3"));
+AddTask("g5", "fix overlaps of diamonds", ass="", stat="pending", dep=deps("g3"));
 AddTask("g6", "update pixels for Run3", ass="Fabrizio", resp="Wagner", stat="prepare", dep=deps("g3"));
 AddTask("g7", "upload Run3 geometry XML to DB", ass="Wagner", resp="Fabrizio", stat="pending", dep=deps("g4", "g5", "g6"));
 
-AddTask("g11", "organise files in Geometry/VeryForwardData/data", ass="?", stat="pending", dep=deps("g5", "g6"));
+AddTask("g11", "organise files in Geometry/VeryForwardData/data", ass="", stat="pending", dep=deps("g5", "g6"));
 
 AddTask("g8", "pre-processed geometry to DB -- initial", ass="Wagner", cons="Jan", resp="Fabrizio", stat="prepare", dep=deps(), comments="
 * use a place-holder for Run3\\
 * default reco sequence uses pre-processed geometry
 ");
 
-AddTask("g2", "remove geometry specs from reco cff files", ass="?", stat="pending", dep=deps("g8"), comments="https://github.com/cms-sw/cmssw/issues/31360");
+AddTask("g2", "remove geometry specs from reco cff files", ass="", stat="pending", dep=deps("g8"), comments="https://github.com/cms-sw/cmssw/issues/31360");
 
 AddTask("g9", "pre-processed geometry to DB -- updated for Run3", ass="Wagner", resp="Fabrizio", stat="pending", dep=deps("g7", "g8"));
 
@@ -81,7 +81,7 @@ NROCsMAX instead of NplaneMAX \ulink{https://github.com/cms-sw/cmssw/blob/ae40f9
 
 AddTask("dqm2", "timing RPs -- add new Run3 RPs", ass="Laurent", resp="DPG", stat="prep", dep=deps("g3"));
 
-AddTask("dqm3", "timing RPs -- other possible tasks", ass="?", resp="DPG", stat="pending", comments="
+AddTask("dqm3", "timing RPs -- other possible tasks", ass="", resp="DPG", stat="pending", comments="
 config flags to enable/disable plots for online/offline DQM,
 acquisition window size steered with a run-time parameter,\\
 TotemTimingDQMSource adapted for SAMPIC,

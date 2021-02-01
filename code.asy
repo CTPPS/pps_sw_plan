@@ -27,9 +27,12 @@ struct Item
 
 Item items[];
 
-void AddTask(string tag, string name, string pri="", string ass="?", string cons="", string resp="?", string stat="",
+void AddTask(string tag, string name, string pri="", string ass="", string cons="", string resp="?", string stat="",
 	string pr="", string due="", string dep[] = new string[], string comments="")
 {
+	if (ass == "")
+		ass = "\cRed!missing!\cBlack";
+
 	Item t;
 	t.type = "task";
 	t.tag = tag;
