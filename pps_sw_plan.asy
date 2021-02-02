@@ -64,7 +64,7 @@ AddTask("ds1", "2021 profile", ass="Jan", resp="", stat="merged", dep=deps("g3")
 adds also a default RP-position file with reasonable RP-beam distances (2mm for horizontal and 7mm for vertical RPs)
 ");
 
-AddTask("ds2", "tracking-RP efficiency", ass="Jan", cons="Andrea", resp="DPG", stat="prepare", due="Feb 2021", dep=deps("ds0", "g4"));
+AddTask("ds2", "tracking-RP efficiency", ass="Jan", cons="Andrea", resp="DPG", stat="open", pr="32788", due="Feb 2021", dep=deps("ds0", "g4"));
 
 AddTask("ds3", "use cloning in cff files", pri="high", ass="Laurent", resp="Jan", stat="prepare", due="Feb 2021", dep=deps("g3", "ds1"), comments="
 to address \ulink{https://github.com/cms-sw/cmssw/issues/32448}{issue \#32448}

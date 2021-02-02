@@ -31,7 +31,7 @@ void AddTask(string tag, string name, string pri="", string ass="", string cons=
 	string pr="", string due="", string dep[] = new string[], string comments="")
 {
 	if (ass == "")
-		ass = "\cRed!missing!\cBlack";
+		ass = "\cRed{\bf missing!}\cBlack";
 
 	Item t;
 	t.type = "task";
