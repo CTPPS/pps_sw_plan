@@ -37,12 +37,14 @@ the same z should be used by strip RPs, pixel RPs and optics
 //AddCategory("alignment");
 
 //----------------------------------------
-//AddCategory("reconstruction");
+AddCategory("reconstruction");
+
+AddTask("re1", "pixels: use InputTag instead of plain string labels", ass="Andrea", resp="Fabrizio", stat="prepare", due="Feb 2021");
 
 //----------------------------------------
 AddCategory("direct simulation");
 
-AddTask("ds2", "tracking-RP efficiency", ass="Jan", cons="Andrea", resp="DPG", stat="open", pr="32788", due="Feb 2021", dep=deps());
+AddTask("ds2", "tracking-RP efficiency", ass="Jan", cons="Andrea", resp="DPG", stat="merged", pr="32788", due="", dep=deps());
 
 AddTask("ds3", "use cloning in cff files", pri="high", ass="Laurent", resp="Jan", stat="prepare", due="Feb 2021", dep=deps(), comments="
 to address \ulink{https://github.com/cms-sw/cmssw/issues/32448}{issue \#32448}
