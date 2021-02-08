@@ -14,7 +14,9 @@ AddTask("g7", "upload Run3 geometry XML to DB", ass="Wagner", resp="Fabrizio", s
 
 AddTask("g11", "organise files in Geometry/VeryForwardData/data", ass="", stat="pending", dep=deps("g5", "g6"));
 
-AddTask("g8", "pre-processed geometry to DB -- initial", ass="Wagner", cons="Jan", resp="Fabrizio", stat="prepare", dep=deps(), comments="
+AddTask("g13", "pre-processed geometry to DB -- preparation", ass="Wagner", cons="Jan", resp="Fabrizio", pr="32836", stat="open", dep=deps());
+
+AddTask("g8", "pre-processed geometry to DB -- initial upload", ass="Wagner", cons="Jan", resp="Fabrizio", stat="prepare", dep=deps("g13"), comments="
 * use a place-holder for Run3\\
 * default reco sequence uses pre-processed geometry
 ");
@@ -50,7 +52,7 @@ AddTask("ds3", "use cloning in cff files", pri="high", ass="Laurent", resp="Jan"
 to address \ulink{https://github.com/cms-sw/cmssw/issues/32448}{issue \#32448}
 ");
 
-AddTask("ds4", "backport to 10\_6", ass="Jan", stat="pending", due="Feb 2021", dep=deps("ds2", "ds3"));
+AddTask("ds4", "backport to 10\_6", pri="high", ass="Jan", stat="pending", due="Feb 2021", dep=deps("ds2", "ds3"));
 
 //----------------------------------------
 AddCategory("DQM");
@@ -73,7 +75,7 @@ AddTask("pcl2", "alignment", ass="Mateusz?", cons="Jan, DB", resp="DPG", stat="p
 //----------------------------------------
 AddCategory("nanoAOD");
 
-AddTask("na2", "simu tracks and protons in nanoAOD", ass="Justin?", cons="Jan", resp="POG", stat="pending", dep=deps(), comments="
+AddTask("na2", "simu tracks and protons in nanoAOD", ass="", cons="Jan", resp="POG", stat="pending", dep=deps(), comments="
 idea: run ``direct'' simu during nanoAOD production\\
 by default, this would be disabled, but available for private use
 ");
