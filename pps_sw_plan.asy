@@ -8,7 +8,9 @@ AddCategory("geometry");
 
 AddTask("g5", "fix overlaps of diamonds", ass="", stat="pending", dep=deps());
 
-AddTask("g6", "update pixels for Run3", ass="Fabrizio", resp="Jan, Luiz", stat="prepare", dep=deps());
+AddTask("g6", "update pixels for Run3", ass="Fabrizio", resp="Jan, Luiz", stat="prepare", dep=deps(), comments="
+requires to have different pixel topology for Run 2 and 3 -- solved by moving the topology objects to ES with naturally associated IOVs
+");
 
 AddTask("g7", "upload Run3 geometry XML to DB", ass="Wagner", resp="Fabrizio", stat="pending", dep=deps("g5", "g6"));
 
@@ -21,9 +23,9 @@ AddTask("g8", "pre-processed geometry to DB -- initial upload", ass="Wagner", co
 * default reco sequence uses pre-processed geometry
 ");
 
-AddTask("g2", "remove geometry specs from reco cff files", ass="", stat="pending", dep=deps("g8"), comments="https://github.com/cms-sw/cmssw/issues/31360");
-
 AddTask("g9", "pre-processed geometry to DB -- updated for Run3", ass="Wagner", resp="Fabrizio", stat="pending", dep=deps("g7", "g8"));
+
+AddTask("g2", "remove geometry specs from reco cff files", ass="", stat="pending", dep=deps("g8"), comments="https://github.com/cms-sw/cmssw/issues/31360");
 
 AddTask("g12", "check compatibility of scoring plane z", pri="low", ass="Jan", resp="Fabrizio", stat="pending", due="Feb 2021", comments="
 the same z should be used by strip RPs, pixel RPs and optics
