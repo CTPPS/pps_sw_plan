@@ -8,7 +8,7 @@ AddCategory("geometry");
 
 AddTask("g5", "fix overlaps of diamonds", ass="", stat="pending", dep=deps());
 
-AddTask("g6", "update pixels for Run3 -- topology", ass="Fabrizio", resp="Jan, Luiz", stat="prepare", dep=deps(), comments="
+AddTask("g6", "update pixels for Run3 -- topology", ass="Fabrizio", resp="Jan, Luiz", stat="open", pr="32868", dep=deps(), comments="
 different pixel topology needed for Run 2 and 3 -- solved by moving the topology objects to ES with naturally associated IOVs
 ");
 
@@ -100,7 +100,7 @@ by default, this would be disabled, but available for private use
 //----------------------------------------
 AddCategory("other");
 
-AddTask("ot1", "standardised code for simu + PU event merging", ass="Andrea?", resp="POG", stat="pending", dep=deps(), comments="
+AddTask("ot1", "standardised code for simu + PU event merging", ass="Andrea", resp="POG", stat="pending", dep=deps(), comments="
 code for standard PPS procedure of mixing (rec-hit level) simu signal with PU from unrelated real LHC events
 ");
 
