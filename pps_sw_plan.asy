@@ -18,7 +18,7 @@ AddTask("g7", "upload Run3 geometry XML to DB", ass="Wagner", resp="Fabrizio", s
 
 AddTask("g11", "organise files in Geometry/VeryForwardData/data", ass="a newcomer", cons="Clemencia", resp="Fabrizio", stat="pending", dep=deps("g5", "g14"));
 
-AddTask("g13", "pre-processed geometry to DB -- preparation", ass="Wagner", cons="Jan", resp="Fabrizio", pr="32836", stat="open", dep=deps());
+AddTask("g13", "pre-processed geometry to DB -- preparation", ass="Wagner", cons="Jan", resp="Fabrizio", pr="32836", stat="merged", dep=deps());
 
 AddTask("g8", "pre-processed geometry to DB -- initial upload", ass="Wagner", cons="Jan", resp="Fabrizio", stat="prepare", dep=deps("g13"), comments="
 * use a place-holder for Run3\\
