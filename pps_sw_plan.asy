@@ -45,9 +45,9 @@ the same z should be used by strip RPs, pixel RPs and optics
 //----------------------------------------
 AddCategory("reconstruction");
 
-AddTask("re1", "pixels: use InputTag instead of plain string labels", ass="Andrea", resp="Fabrizio", stat="merged", pr="32971", due="Feb 2021");
+AddTask("re1", "pixels: use InputTag instead of plain string labels", ass="Andrea", resp="Fabrizio", stat="merged", pr="32971", flags="updated");
 
-AddTask("re2", "diamonds: SAMPIC readout support", ass="Chris", cons="Edoardo", resp="Valentina", stat="prepare", pr="", due="");
+AddTask("re2", "diamonds: SAMPIC readout support", ass="Chris", cons="Edoardo", resp="Valentina", stat="prepare", pr="", flags="updated");
 
 
 
@@ -56,11 +56,11 @@ AddCategory("direct simulation");
 
 AddTask("ds2", "tracking-RP efficiency", ass="Jan", cons="Andrea", resp="DPG", stat="merged", pr="32788", due="", dep=deps());
 
-AddTask("ds3", "use cloning in cff files", pri="", ass="Laurent", resp="Jan", stat="merged", pr="32974", due="", dep=deps(), comments="
+AddTask("ds3", "use cloning in cff files", pri="", ass="Laurent", resp="Jan", stat="merged", pr="32974", due="", dep=deps(), flags="updated", comments="
 to address \ulink{https://github.com/cms-sw/cmssw/issues/32448}{issue \#32448}
 ");
 
-AddTask("ds4", "backport to 10\_6", pri="high", ass="Jan", stat="pending", due="Mar 2021", dep=deps("ds2", "ds3"));
+AddTask("ds4", "backport to 10\_6", pri="high", ass="Jan", stat="pending", resp="POG", due="Mar 2021", dep=deps("ds2", "ds3"));
 
 
 
@@ -106,4 +106,6 @@ AddTask("ot1", "standardised code for simu + PU event merging", ass="Andrea", re
 code for standard PPS procedure of mixing (rec-hit level) simu signal with PU from unrelated real LHC events
 ");
 
-MakePlot();
+//----------------------------------------
+
+MakePlot(320);

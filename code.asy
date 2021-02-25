@@ -11,8 +11,8 @@ struct Item
 	string status;
 	string pr;
 	string due_date;
-
 	string comments;
+	string flags;
 
 	string dependencies[];
 
@@ -25,11 +25,22 @@ struct Item
 	picture pic;
 };
 
+//----------------------------------------------------------------------------------------------------
+
 Item items[];
 
 void AddTask(string tag, string name, string pri="", string ass="", string cons="", string resp="?", string stat="",
-	string pr="", string due="", string dep[] = new string[], string comments="")
+	string pr="", string due="", string dep[] = new string[], string comments="", string flags="")
 {
+	// check if task with the tag already exists
+	bool exists = false;
+	for (Item t : items)
+	{
+		if (t.type == "task" && t.tag == tag)
+			abort("ERROR in AddTask: task with tag '" + tag + "' already exists.");
+	}
+
+	// add task
 	if (ass == "")
 		ass = "\cRed{\bf missing!}\cBlack";
 
@@ -45,8 +56,8 @@ void AddTask(string tag, string name, string pri="", string ass="", string cons=
 	t.status = stat;
 	t.pr = pr;
 	t.due_date = due;
-
 	t.comments = comments;
+	t.flags = flags;
 
 	t.idx = -1;
 	t.xl = 0;
@@ -57,6 +68,8 @@ void AddTask(string tag, string name, string pri="", string ass="", string cons=
 
 	items.push(t);
 }
+
+//----------------------------------------------------------------------------------------------------
 
 void AddCategory(string name)
 {
@@ -182,7 +195,7 @@ void ProcessItems()
 //----------------------------------------------------------------------------------------------------
 // make plot
 
-void PlotItems()
+void PlotItems(real width)
 {
 	unitsize(1mm);
 
@@ -192,7 +205,7 @@ void PlotItems()
 
 	for (Item it : items)
 	{
-		draw((-10, it.yt + 1)--(360, it.yt + 1), dotted);
+		draw((-10, it.yt + 1)--(width, it.yt + 1), dotted);
 
 		add(it.pic, (0, it.yt));
 
@@ -204,7 +217,12 @@ void PlotItems()
 			if (it.status == "ongoing" || it.status == "open") p = yellow;
 			if (it.status == "done" || it.status == "merged") p = green;
 
-			filldraw((x0+it.xl, it.yb)--(x0+it.xr, it.yb)--(x0+it.xr, it.yt)--(x0+it.xl, it.yt)--cycle, p, black+0.1pt);
+			pen p_border = black + 0.1pt;
+
+			if (find(it.flags, "updated") >= 0)
+				p_border = blue + 3pt + linetype(new real[] {2, 2});
+
+			filldraw((x0+it.xl, it.yb)--(x0+it.xr, it.yb)--(x0+it.xr, it.yt)--(x0+it.xl, it.yt)--cycle, p, p_border);
 
 			for (string dep : it.dependencies)
 			{
@@ -218,8 +236,8 @@ void PlotItems()
 //----------------------------------------------------------------------------------------------------
 // user plot command
 
-void MakePlot()
+void MakePlot(real width = 360)
 {
 	ProcessItems();
-	PlotItems();
+	PlotItems(width);
 }
