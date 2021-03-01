@@ -47,7 +47,7 @@ AddCategory("reconstruction");
 
 AddTask("re1", "pixels: use InputTag instead of plain string labels", ass="Andrea", resp="Fabrizio", stat="merged", pr="32971", flags="updated");
 
-AddTask("re3", "fix of direct simulation workflow", ass="Laurent", resp="", stat="open", pr="32998", dep=deps("re1"), flags="updated");
+AddTask("re3", "fix of direct simulation workflow", ass="Laurent", resp="", stat="merged", pr="32998", dep=deps("re1"), flags="updated");
 
 AddTask("re2", "diamonds: SAMPIC readout support", ass="Chris", cons="Edoardo", resp="Valentina", stat="prepare", pr="", flags="updated");
 
