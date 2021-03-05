@@ -33,14 +33,26 @@ AddTask("g12", "check compatibility of scoring plane z", pri="low", ass="Jan", r
 the same z should be used by strip RPs, pixel RPs and optics
 ");
 
+
+
 //----------------------------------------
-//AddCategory("config");
+AddCategory("config");
+
+AddTask("co1", "rectify the meaning of ctpps\_20XY era modifiers", pri="high", ass="Jan", resp="Fabrizio", stat="prepare", pr="", flags="updated", comments="
+details discussed in \ulink{https://github.com/cms-sw/cmssw/issues/33080}{issue \#33080}
+");
+
+
 
 //----------------------------------------
 //AddCategory("optimisations");
 
+
+
 //----------------------------------------
 //AddCategory("alignment");
+
+
 
 //----------------------------------------
 AddCategory("reconstruction");
