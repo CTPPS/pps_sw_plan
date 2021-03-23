@@ -195,7 +195,7 @@ void ProcessItems()
 //----------------------------------------------------------------------------------------------------
 // make plot
 
-void PlotItems(real width)
+void PlotItems(real width, string highlight_flag)
 {
 	unitsize(1mm);
 
@@ -219,8 +219,16 @@ void PlotItems(real width)
 
 			pen p_border = black + 0.1pt;
 
-			if (find(it.flags, "updated") >= 0)
-				p_border = blue + 3pt + linetype(new real[] {2, 2});
+			string flags[] = split(it.flags, ",");
+
+			for (string flag : flags)
+			{
+				if (flag == highlight_flag)
+				{
+					p_border = blue + 3pt + linetype(new real[] {2, 2});
+					break;
+				}
+			}
 
 			filldraw((x0+it.xl, it.yb)--(x0+it.xr, it.yb)--(x0+it.xr, it.yt)--(x0+it.xl, it.yt)--cycle, p, p_border);
 
@@ -236,8 +244,8 @@ void PlotItems(real width)
 //----------------------------------------------------------------------------------------------------
 // user plot command
 
-void MakePlot(real width = 360)
+void MakePlot(real width = 360, string highlight_flag="new")
 {
 	ProcessItems();
-	PlotItems(width);
+	PlotItems(width, highlight_flag);
 }
