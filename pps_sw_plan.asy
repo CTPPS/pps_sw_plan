@@ -38,7 +38,7 @@ the same z should be used by strip RPs, pixel RPs and optics
 //----------------------------------------
 AddCategory("config");
 
-AddTask("co1", "rectify the meaning of ctpps\_20XY era modifiers", pri="high", ass="Jan", resp="Fabrizio", stat="prepare", pr="", flags="updated", comments="
+AddTask("co1", "rectify the meaning of ctpps\_20XY era modifiers", pri="high", ass="Jan", resp="Fabrizio", stat="open", pr="33250", flags="new-gm,new", comments="
 details discussed in \ulink{https://github.com/cms-sw/cmssw/issues/33080}{issue \#33080}
 ");
 
@@ -57,11 +57,11 @@ details discussed in \ulink{https://github.com/cms-sw/cmssw/issues/33080}{issue 
 //----------------------------------------
 AddCategory("reconstruction");
 
-AddTask("re1", "pixels: use InputTag instead of plain string labels", ass="Andrea", resp="Fabrizio", stat="merged", pr="32971", flags="updated");
+AddTask("re1", "pixels: use InputTag instead of plain string labels", ass="Andrea", resp="Fabrizio", stat="merged", pr="32971", flags="new-gm");
 
-AddTask("re3", "fix of direct simulation workflow", ass="Laurent", resp="", stat="merged", pr="32998", dep=deps("re1"), flags="updated");
+AddTask("re3", "fix of direct simulation workflow", ass="Laurent", resp="", stat="merged", pr="32998", dep=deps("re1"), flags="new-gm");
 
-AddTask("re2", "diamonds: SAMPIC readout support", ass="Chris", cons="Edoardo", resp="Valentina", stat="prepare", pr="", flags="updated");
+AddTask("re2", "diamonds: SAMPIC readout support", ass="Chris", cons="Edoardo", resp="Valentina", stat="prepare", pr="", flags="new-gm");
 
 
 
@@ -70,7 +70,7 @@ AddCategory("direct simulation");
 
 AddTask("ds2", "tracking-RP efficiency", ass="Jan", cons="Andrea", resp="DPG", stat="merged", pr="32788", due="", dep=deps());
 
-AddTask("ds3", "use cloning in cff files", pri="", ass="Laurent", resp="Jan", stat="merged", pr="32974", due="", dep=deps(), flags="updated", comments="
+AddTask("ds3", "use cloning in cff files", pri="", ass="Laurent", resp="Jan", stat="merged", pr="32974", due="", dep=deps(), flags="new-gm", comments="
 to address \ulink{https://github.com/cms-sw/cmssw/issues/32448}{issue \#32448}
 ");
 
@@ -98,7 +98,8 @@ AddTask("dqm7", "timing RPs -- adjust ranges for better readability", ass="Chris
 //----------------------------------------
 AddCategory("PCLs");
 
-AddTask("pcl1", "timing calibration", ass="Laurent", cons="DB", resp="DPG", stat="prepare");
+AddTask("pcl1", "timing calibration", ass="Laurent", cons="DB", resp="DPG", stat="open", pr="33215", flags="new");
+
 AddTask("pcl2", "alignment", ass="Mateusz", cons="Jan, DB", resp="DPG", stat="prepare");
 
 //----------------------------------------
@@ -122,4 +123,4 @@ code for standard PPS procedure of mixing (rec-hit level) simu signal with PU fr
 
 //----------------------------------------
 
-MakePlot(320);
+MakePlot(321, "new");
