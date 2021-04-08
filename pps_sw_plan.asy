@@ -74,7 +74,7 @@ AddTask("ds3", "use cloning in cff files", pri="", ass="Laurent", resp="Jan", st
 to address \ulink{https://github.com/cms-sw/cmssw/issues/32448}{issue \#32448}
 ");
 
-AddTask("ds5", "2021 profile uses 14 TeV", pri="", ass="Jan", stat="open", resp="POG", due="", flags="new-gm,new");
+AddTask("ds5", "2021 profile uses 14 TeV", pri="", ass="Jan", stat="merged", resp="POG", pr="33370", flags="new-gm,new");
 
 AddTask("ds4", "backport to 10\_6", pri="high", ass="Jan?", stat="pending", resp="POG", due="", dep=deps("ds2", "ds3", "ds5"));
 
