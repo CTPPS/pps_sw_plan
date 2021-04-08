@@ -38,7 +38,7 @@ the same z should be used by strip RPs, pixel RPs and optics
 //----------------------------------------
 AddCategory("config");
 
-AddTask("co1", "rectify the meaning of ctpps\_20XY era modifiers", pri="high", ass="Jan", resp="Fabrizio", stat="open", pr="33250", flags="new-gm,new", comments="
+AddTask("co1", "rectify the meaning of ctpps\_20XY era modifiers", pri="high", ass="Jan", resp="Fabrizio", stat="open", pr="33250", flags="new-gm", comments="
 details discussed in \ulink{https://github.com/cms-sw/cmssw/issues/33080}{issue \#33080}
 ");
 
@@ -74,7 +74,9 @@ AddTask("ds3", "use cloning in cff files", pri="", ass="Laurent", resp="Jan", st
 to address \ulink{https://github.com/cms-sw/cmssw/issues/32448}{issue \#32448}
 ");
 
-AddTask("ds4", "backport to 10\_6", pri="high", ass="Jan", stat="pending", resp="POG", due="Mar 2021", dep=deps("ds2", "ds3"));
+AddTask("ds5", "2021 profile uses 14 TeV", pri="", ass="Jan", stat="open", resp="POG", due="", flags="new-gm,new");
+
+AddTask("ds4", "backport to 10\_6", pri="high", ass="Jan?", stat="pending", resp="POG", due="", dep=deps("ds2", "ds3", "ds5"));
 
 
 
@@ -98,7 +100,7 @@ AddTask("dqm7", "timing RPs -- adjust ranges for better readability", ass="Chris
 //----------------------------------------
 AddCategory("PCLs");
 
-AddTask("pcl1", "timing calibration", ass="Laurent", cons="DB", resp="DPG", stat="open", pr="33215", flags="new");
+AddTask("pcl1", "timing calibration", ass="Laurent", cons="DB", resp="DPG", stat="open", pr="33215", flags="new-gm");
 
 AddTask("pcl2", "alignment", ass="Mateusz", cons="Jan, DB", resp="DPG", stat="prepare");
 
