@@ -12,9 +12,13 @@ AddTask("g6", "update pixels for Run3 -- topology", ass="Fabrizio", resp="Jan, L
 different pixel topology needed for Run 2 and 3 -- solved by moving the topology objects to ES with naturally associated IOVs
 ");
 
-AddTask("g14", "update pixels for Run3 -- XML files", ass="Fabrizio", resp="Jan, Luiz", stat="prepare", dep=deps("g6"), comments="");
+AddTask("g15", "first upload of Run3 geometry XML to DB", ass="Wagner", resp="", stat="done", dep=deps(), flags="new-gm,new", comments="
+actived in \#33404 by Helena
+");
 
-AddTask("g7", "upload Run3 geometry XML to DB", ass="Wagner", resp="Fabrizio", stat="pending", dep=deps("g5", "g14"));
+AddTask("g14", "update pixels for Run3 -- XML files", ass="Fabrizio", resp="Jan, Luiz", stat="prepare", dep=deps("g6", "g15", "co1"), flags="new-gm,new", comments="");
+
+AddTask("g7", "final upload of Run3 geometry XML to DB", ass="Wagner", resp="Fabrizio", stat="pending", dep=deps("g5", "g14"));
 
 AddTask("g11", "organise files in Geometry/VeryForwardData/data", ass="a newcomer", cons="Clemencia", resp="Fabrizio", stat="pending", dep=deps("g5", "g14"));
 
@@ -38,8 +42,8 @@ the same z should be used by strip RPs, pixel RPs and optics
 //----------------------------------------
 AddCategory("config");
 
-AddTask("co1", "rectify the meaning of ctpps\_20XY era modifiers", pri="high", ass="Jan", resp="Fabrizio", stat="open", pr="33250", flags="new-gm", comments="
-details discussed in \ulink{https://github.com/cms-sw/cmssw/issues/33080}{issue \#33080}
+AddTask("co1", "rectify the meaning of ctpps\_20XY era modifiers", pri="high", ass="Jan", resp="Fabrizio", stat="merged", pr="33250", flags="new-gm,new", dep=deps("g15"), comments="
+details discussed in \ulink{https://github.com/cms-sw/cmssw/issues/33080}{issue \#33080}, patch eventually included in \#33415
 ");
 
 
@@ -100,9 +104,9 @@ AddTask("dqm7", "timing RPs -- adjust ranges for better readability", ass="Chris
 //----------------------------------------
 AddCategory("PCLs");
 
-AddTask("pcl1", "timing calibration", ass="Laurent", cons="DB", resp="DPG", stat="open", pr="33215", flags="new-gm");
+AddTask("pcl1", "timing calibration", ass="Laurent", cons="", resp="DPG", stat="open", pr="33215", flags="new-gm");
 
-AddTask("pcl2", "alignment", ass="Mateusz", cons="Jan, DB", resp="DPG", stat="prepare");
+AddTask("pcl2", "alignment", ass="Mateusz", cons="Jan", resp="DPG", stat="prepare");
 
 //----------------------------------------
 AddCategory("nanoAOD");
@@ -125,4 +129,4 @@ code for standard PPS procedure of mixing (rec-hit level) simu signal with PU fr
 
 //----------------------------------------
 
-MakePlot(321, "new");
+MakePlot(340, "new");
