@@ -3,40 +3,6 @@ import code;
 //----------------------------------------
 //AddCategory("data formats");
 
-//----------------------------------------
-AddCategory("geometry");
-
-AddTask("g5", "fix overlaps of diamonds", ass="", stat="pending", dep=deps());
-
-AddTask("g6", "update pixels for Run3 -- topology", ass="Fabrizio", resp="Jan, Luiz", stat="merged", pr="32868", dep=deps(), comments="
-different pixel topology needed for Run 2 and 3 -- solved by moving the topology objects to ES with naturally associated IOVs
-");
-
-AddTask("g15", "first upload of Run3 geometry XML to DB", ass="Wagner", resp="", stat="done", dep=deps(), flags="new-gm,new", comments="
-actived in \#33404 by Helena
-");
-
-AddTask("g14", "update pixels for Run3 -- XML files", ass="Fabrizio", resp="Jan, Luiz", stat="prepare", dep=deps("g6", "g15", "co1"), flags="new-gm,new", comments="");
-
-AddTask("g7", "final upload of Run3 geometry XML to DB", ass="Wagner", resp="Fabrizio", stat="pending", dep=deps("g5", "g14"));
-
-AddTask("g11", "organise files in Geometry/VeryForwardData/data", ass="a newcomer", cons="Clemencia", resp="Fabrizio", stat="pending", dep=deps("g5", "g14"));
-
-AddTask("g13", "pre-processed geometry to DB -- preparation", ass="Wagner", cons="Jan", resp="Fabrizio", pr="32836", stat="merged", dep=deps());
-
-AddTask("g8", "pre-processed geometry to DB -- initial upload", ass="Wagner", cons="Jan", resp="Fabrizio", stat="prepare", dep=deps("g13"), comments="
-* use a place-holder for Run3\\
-* default reco sequence uses pre-processed geometry
-");
-
-AddTask("g9", "pre-processed geometry to DB -- updated for Run3", ass="Wagner", resp="Fabrizio", stat="pending", dep=deps("g7", "g8"));
-
-AddTask("g2", "remove geometry specs from reco cff files", ass="Jan", stat="pending", dep=deps("g8"), comments="https://github.com/cms-sw/cmssw/issues/31360");
-
-AddTask("g12", "check compatibility of scoring plane z", pri="low", ass="Jan", resp="Fabrizio", stat="pending", due="", comments="
-the same z should be used by strip RPs, pixel RPs and optics
-");
-
 
 
 //----------------------------------------
@@ -44,6 +10,41 @@ AddCategory("config");
 
 AddTask("co1", "rectify the meaning of ctpps\_20XY era modifiers", pri="high", ass="Jan", resp="Fabrizio", stat="merged", pr="33250", flags="new-gm,new", dep=deps("g15"), comments="
 details discussed in \ulink{https://github.com/cms-sw/cmssw/issues/33080}{issue \#33080}, patch eventually included in \#33415
+");
+
+
+
+//----------------------------------------
+AddCategory("geometry");
+
+AddTask("g6", "update pixels for Run3 -- topology", ass="Fabrizio", resp="Jan, Luiz", stat="merged", pr="32868", dep=deps(), comments="
+different pixel topology needed for Run 2 and 3 -- solved by moving the topology objects to ES with naturally associated IOVs
+");
+
+AddTask("g15", "first upload of Run3 geometry XML to DB", ass="Wagner", resp="", stat="done", dep=deps(), flags="new-gm,new", comments="
+just to maintain SW consistency, actived in \#33404 by Helena
+");
+
+AddTask("g14", "update pixels for Run3 -- XML files", ass="Fabrizio", resp="Jan, Luiz", stat="prepare", dep=deps("g6", "g15", "co1", "g16"), flags="new-gm,new", comments="");
+
+AddTask("g5", "fix overlaps of diamonds", ass="", stat="pending", dep=deps());
+
+AddTask("g7", "final upload of Run3 geometry XML to DB", ass="Wagner", resp="Fabrizio", stat="pending", dep=deps("g5", "g14"));
+
+AddTask("g13", "pre-processed geometry to DB -- preparation 1", ass="Wagner", cons="Jan", resp="Fabrizio", pr="32836", stat="merged", dep=deps());
+
+AddTask("g16", "pre-processed geometry to DB -- preparation 2", ass="Wagner", cons="Jan", resp="Fabrizio", pr="", stat="prepare", dep=deps("g13"), flags="new-gm,new");
+
+AddTask("g8", "pre-processed geometry to DB", ass="Wagner", cons="Jan", resp="Fabrizio", stat="prepare", dep=deps("g16", "g14"), comments="
+* default reco sequence uses pre-processed geometry
+");
+
+AddTask("g11", "organise files in Geometry/VeryForwardData/data", ass="a newcomer", cons="Clemencia", resp="Fabrizio", stat="pending", dep=deps("g5", "g14"));
+
+AddTask("g2", "remove geometry specs from reco cff files", ass="Jan", stat="pending", dep=deps("g8"), comments="https://github.com/cms-sw/cmssw/issues/31360");
+
+AddTask("g12", "check compatibility of scoring plane z", pri="low", ass="Jan", resp="Fabrizio", stat="pending", due="", comments="
+the same z should be used by strip RPs, pixel RPs and optics
 ");
 
 
