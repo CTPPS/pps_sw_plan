@@ -29,7 +29,9 @@ AddTask("g14", "update pixels for Run3 -- XML files", ass="Fabrizio", resp="Jan,
 
 AddTask("g5", "fix overlaps of diamonds", ass="", stat="pending", dep=deps());
 
-AddTask("g7", "final upload of Run3 geometry XML to DB", ass="Wagner", resp="Fabrizio", stat="pending", dep=deps("g5", "g14"));
+AddTask("g17", "fix of DD4Hep related issues", ass="Fabrizio", resp="", stat="pending", dep=deps("g14"));
+
+AddTask("g7", "final upload of Run3 geometry XML to DB", ass="Wagner", resp="Fabrizio", stat="pending", dep=deps("g5", "g17"));
 
 AddTask("g13", "pre-processed geometry to DB -- preparation 1", ass="Wagner", cons="Jan", resp="Fabrizio", pr="32836", stat="merged", dep=deps());
 
