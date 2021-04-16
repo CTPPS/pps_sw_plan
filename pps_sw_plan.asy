@@ -37,13 +37,15 @@ AddTask("g13", "pre-processed geometry to DB -- preparation 1", ass="Wagner", co
 
 AddTask("g16", "pre-processed geometry to DB -- preparation 2", ass="Wagner", cons="Jan", resp="Fabrizio", pr="", stat="prepare", dep=deps("g13"), flags="new-gm,new");
 
-AddTask("g8", "pre-processed geometry to DB", ass="Wagner", cons="Jan", resp="Fabrizio", stat="prepare", dep=deps("g16", "g14"), comments="
-* default reco sequence uses pre-processed geometry
+AddTask("g8", "pre-processed geometry to DB", ass="Wagner", cons="AlCa", resp="Fabrizio", stat="prepare", dep=deps("g16", "g14"), comments="
+also inclusion to GT
 ");
+
+AddTask("g18", "default reco sequence uses pre-processed geometry", ass="Wagner", cons="Jan", resp="Fabrizio", stat="prepare", dep=deps("g8"), comments="");
 
 AddTask("g11", "organise files in Geometry/VeryForwardData/data", ass="a newcomer", cons="Clemencia", resp="Fabrizio", stat="pending", dep=deps("g5", "g14"));
 
-AddTask("g2", "remove geometry specs from reco cff files", ass="Jan", stat="pending", dep=deps("g8"), comments="https://github.com/cms-sw/cmssw/issues/31360");
+AddTask("g2", "remove geometry specs from reco cff files", ass="Jan", stat="pending", dep=deps("g18"), comments="https://github.com/cms-sw/cmssw/issues/31360");
 
 AddTask("g12", "check compatibility of scoring plane z", pri="low", ass="Jan", resp="Fabrizio", stat="pending", due="", comments="
 the same z should be used by strip RPs, pixel RPs and optics
@@ -132,4 +134,4 @@ code for standard PPS procedure of mixing (rec-hit level) simu signal with PU fr
 
 //----------------------------------------
 
-MakePlot(340, "new");
+MakePlot(360, "new");
