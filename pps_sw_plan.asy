@@ -61,6 +61,8 @@ AddCategory("direct simulation");
 
 AddTask("ds4", "backport to 10\_6", pri="high", ass="Jan?", stat="pending", resp="POG", due="", dep=deps());
 
+AddTask("ds5", "fix timing-vertex plots", ass="Jan", stat="merged", resp="POG", pr="33490", dep=deps());
+
 
 
 //----------------------------------------
