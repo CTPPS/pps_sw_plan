@@ -61,8 +61,6 @@ AddCategory("direct simulation");
 
 AddTask("ds4", "backport to 10\_6", pri="high", ass="Jan?", stat="pending", resp="POG", due="", dep=deps());
 
-AddTask("ds5", "fix timing-vertex plots", ass="Jan", stat="merged", resp="POG", pr="33490", dep=deps());
-
 
 
 //----------------------------------------
@@ -97,6 +95,10 @@ idea: run ``direct'' simu during nanoAOD production\\
 by default, this would be disabled, but available for private use
 ");
 
+//----------------------------------------
+AddCategory("framework");
+
+AddTask("fw1", "esConsumes in CalibPPS and DQM/CTPPS", ass="Fabrizio", cons="", resp="", stat="open", dep=deps(), pr="33848", comments="");
 
 //----------------------------------------
 //AddCategory("filters");
