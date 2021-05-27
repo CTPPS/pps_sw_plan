@@ -98,7 +98,7 @@ by default, this would be disabled, but available for private use
 //----------------------------------------
 AddCategory("framework");
 
-AddTask("fw1", "esConsumes in CalibPPS and DQM/CTPPS", ass="Fabrizio", cons="", resp="", stat="open", dep=deps(), pr="33848", comments="");
+AddTask("fw1", "esConsumes in CalibPPS and DQM/CTPPS", ass="Fabrizio", cons="", resp="", stat="merged", dep=deps(), pr="33848", comments="");
 
 //----------------------------------------
 //AddCategory("filters");
