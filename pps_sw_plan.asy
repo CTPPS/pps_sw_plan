@@ -21,7 +21,7 @@ AddTask("g17", "fix of DD4Hep related issues", ass="Fabrizio", resp="", stat="pe
 
 AddTask("g7", "final upload of Run3 geometry XML to DB", ass="Wagner", resp="Fabrizio", stat="pending", dep=deps("g5", "g17"));
 
-AddTask("g16", "pre-processed geometry to DB -- preparation 2", ass="Wagner", cons="Jan", resp="Fabrizio", pr="", stat="prepare", dep=deps(), flags="");
+AddTask("g16", "pre-processed geometry to DB -- preparation 2", ass="Wagner", cons="Jan", resp="Fabrizio", pr="33851", stat="open", dep=deps(), flags="");
 
 AddTask("g8", "pre-processed geometry to DB", ass="Wagner", cons="AlCa", resp="Fabrizio", stat="prepare", dep=deps("g16", "g14"), comments="
 also inclusion to GT
