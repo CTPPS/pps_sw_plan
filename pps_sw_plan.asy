@@ -100,6 +100,8 @@ AddCategory("framework");
 
 AddTask("fw1", "esConsumes in CalibPPS and DQM/CTPPS", ass="Fabrizio", cons="", resp="", stat="merged", dep=deps(), pr="33848", flags="new,new-gm", comments="");
 
+AddTask("fw2", "esConsumes in CondTools/CTPPS", ass="Jan", cons="", resp="", stat="open", dep=deps(), pr="34377", flags="new,new-gm", comments="");
+
 //----------------------------------------
 //AddCategory("filters");
 
