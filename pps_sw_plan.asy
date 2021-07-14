@@ -78,6 +78,11 @@ AddTask("dqm6", "timing RPs -- extract harvesting code to harverster modules", a
 
 AddTask("dqm7", "timing RPs -- adjust ranges for better readability", ass="Chris ?", resp="DPG", stat="pending", comments="");
 
+AddTask("dqm8", "add PPS to common sequences", ass="Fabrizio", resp="DPG", stat="open", pr="34454", flags="new,new-gm", comments="");
+
+// https://github.com/dmwm/T0/pull/4588
+AddTask("dqm9", "include PPS to T0 processing", ass="Fabrizio", resp="DPG", stat="open", pr="4588", flags="new,new-gm", comments="");
+
 
 
 //----------------------------------------
