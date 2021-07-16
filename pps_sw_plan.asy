@@ -13,7 +13,7 @@ import code;
 //----------------------------------------
 AddCategory("geometry");
 
-AddTask("g14", "update pixels for Run3 -- XML files", ass="Fabrizio", resp="Jan, Luiz", stat="prepare", dep=deps("g16"), flags="", comments="");
+AddTask("g14", "update pixels for Run3 -- XML files", ass="Fabrizio", resp="Jan, Luiz", stat="open", dep=deps("g16"), flags="new,new-gm", pr="34499", comments="");
 
 AddTask("g5", "fix overlaps of diamonds", ass="", stat="pending", dep=deps());
 
