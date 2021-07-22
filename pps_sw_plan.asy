@@ -13,11 +13,11 @@ import code;
 //----------------------------------------
 AddCategory("geometry");
 
-AddTask("g14", "update pixels for Run3 -- XML files", ass="Fabrizio", resp="Jan, Luiz", stat="open", dep=deps("g16"), flags="new,new-gm", pr="34499", comments="");
+AddTask("g14", "update pixels for Run3 -- XML files", ass="Fabrizio", resp="Jan, Luiz", stat="merged", dep=deps("g16"), flags="new,new-gm", pr="34499", comments="");
 
-AddTask("g5", "fix overlaps of diamonds", ass="", stat="pending", dep=deps());
+AddTask("g5", "fix overlaps of diamonds", ass="Gustavo", stat="done", flags="new,new-gm", dep=deps());
 
-AddTask("g17", "fix of DD4Hep related issues", ass="Fabrizio", resp="", stat="pending", dep=deps("g14"));
+AddTask("g17", "fix of DD4Hep related issues", ass="Fabrizio", resp="", stat="done", flags="new,new-gm", dep=deps("g14"));
 
 AddTask("g7", "final upload of Run3 geometry XML to DB", ass="Wagner", resp="Fabrizio", stat="pending", dep=deps("g5", "g17"));
 
