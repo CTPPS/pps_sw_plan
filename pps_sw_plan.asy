@@ -15,21 +15,23 @@ AddCategory("geometry");
 
 AddTask("g14", "update pixels for Run3 -- XML files", ass="Fabrizio", resp="Jan, Luiz", stat="merged", dep=deps("g16"), flags="new,new-gm", pr="34499", comments="");
 
+AddTask("g19", "bugfix -- missing file", ass="Fabrizio", resp="", stat="open", dep=deps("g14"), flags="new,new-gm", pr="34588", comments="");
+
 AddTask("g5", "fix overlaps of diamonds", ass="Gustavo", stat="done", flags="new,new-gm", dep=deps());
 
-AddTask("g17", "fix of DD4Hep related issues", ass="Fabrizio", resp="", stat="done", flags="new,new-gm", dep=deps("g14"));
+AddTask("g17", "fix of DD4Hep related issues", ass="Fabrizio", resp="", stat="done", flags="new,new-gm", dep=deps("g19"));
 
 AddTask("g7", "final upload of Run3 geometry XML to DB", ass="Wagner", resp="Fabrizio", stat="pending", dep=deps("g5", "g17"));
 
 AddTask("g16", "pre-processed geometry to DB -- preparation 2", ass="Wagner", cons="Jan", resp="Fabrizio", pr="33851", stat="merged", dep=deps(), flags="new,new-gm");
 
-AddTask("g8", "pre-processed geometry to DB", ass="Wagner", cons="AlCa", resp="Fabrizio", stat="prepare", dep=deps("g16", "g14"), comments="
+AddTask("g8", "pre-processed geometry to DB", ass="Wagner", cons="AlCa", resp="Fabrizio", stat="prepare", dep=deps("g16", "g19"), comments="
 also inclusion to GT
 ");
 
-AddTask("g18", "default reco sequence uses pre-processed geometry", ass="Wagner", cons="Jan", resp="Fabrizio", stat="prepare", dep=deps("g8"), comments="");
+AddTask("g18", "default reco sequence uses pre-processed geometry", ass="Wagner", cons="Jan", resp="Fabrizio", stat="open", pr="34549", dep=deps("g8"), flags="new,new-gm", comments="");
 
-AddTask("g11", "organise files in Geometry/VeryForwardData/data", ass="a newcomer", cons="Clemencia", resp="Fabrizio", stat="pending", dep=deps("g5", "g14"));
+AddTask("g11", "organise files in Geometry/VeryForwardData/data", ass="a newcomer", cons="Clemencia", resp="Fabrizio", stat="pending", dep=deps("g5", "g19"));
 
 AddTask("g2", "remove geometry specs from reco cff files", ass="Jan", stat="pending", dep=deps("g18"), comments="https://github.com/cms-sw/cmssw/issues/31360");
 
@@ -105,7 +107,7 @@ AddCategory("framework");
 
 AddTask("fw1", "esConsumes in CalibPPS and DQM/CTPPS", ass="Fabrizio", cons="", resp="", stat="merged", dep=deps(), pr="33848", flags="new,new-gm", comments="");
 
-AddTask("fw2", "esConsumes in CondTools/CTPPS", ass="Jan", cons="", resp="", stat="open", dep=deps(), pr="34377", flags="new,new-gm", comments="");
+AddTask("fw2", "esConsumes in CondTools/CTPPS", ass="Jan", cons="", resp="", stat="merged", dep=deps(), pr="34377", flags="new,new-gm", comments="");
 
 //----------------------------------------
 //AddCategory("filters");
