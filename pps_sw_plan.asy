@@ -54,7 +54,7 @@ the same z should be used by strip RPs, pixel RPs and optics
 //----------------------------------------
 AddCategory("reconstruction");
 
-AddTask("re2", "diamonds: SAMPIC readout support", ass="Chris", cons="Edoardo", resp="Valentina", stat="prepare", pr="", flags="");
+AddTask("re2", "diamonds: SAMPIC readout support", ass="Chris", cons="Edoardo", resp="Valentina", stat="open", pr="34759", flags="");
 
 
 
