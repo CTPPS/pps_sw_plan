@@ -54,7 +54,7 @@ the same z should be used by strip RPs, pixel RPs and optics
 //----------------------------------------
 AddCategory("reconstruction");
 
-AddTask("re2", "diamonds: SAMPIC readout support", ass="Chris", cons="Edoardo", resp="Valentina", stat="open", pr="34759", flags="");
+AddTask("re2", "diamonds: SAMPIC readout support", ass="Chris", cons="Edoardo", resp="Valentina", stat="open", pr="34759", flags="new,new-gm");
 
 
 
@@ -102,6 +102,8 @@ idea: run ``direct'' simu during nanoAOD production\\
 by default, this would be disabled, but available for private use
 ");
 
+
+
 //----------------------------------------
 AddCategory("framework");
 
@@ -109,8 +111,14 @@ AddTask("fw1", "esConsumes in CalibPPS and DQM/CTPPS", ass="Fabrizio", cons="", 
 
 AddTask("fw2", "esConsumes in CondTools/CTPPS", ass="Jan", cons="", resp="", stat="merged", dep=deps(), pr="34377", flags="new,new-gm", comments="");
 
+
+
 //----------------------------------------
-//AddCategory("filters");
+AddCategory("filters");
+
+AddTask("fi1", "PPS HLT filter for PCL", ass="Mariana", stat="open", pr="34827", flags="new,new-gm");
+
+
 
 //----------------------------------------
 AddCategory("other");
@@ -118,6 +126,8 @@ AddCategory("other");
 AddTask("ot1", "standardised code for simu + PU event merging", ass="Andrea", resp="POG", stat="pending", dep=deps(), comments="
 code for standard PPS procedure of mixing (rec-hit level) simu signal with PU from unrelated real LHC events
 ");
+
+
 
 //----------------------------------------
 
