@@ -90,7 +90,12 @@ AddTask("dqm9", "include PPS to T0 processing", ass="Fabrizio", resp="DPG", stat
 //----------------------------------------
 AddCategory("PCLs");
 
-AddTask("pcl2", "alignment", ass="Mateusz", cons="Jan", resp="DPG", stat="prepare");
+AddTask("pcl3", "alignment fix: PPSAlignmentConfigRcd registered", ass="Mateusz", cons="Jan", resp="DPG", stat="open", pr="34844", flags="new,new-gm");
+
+AddTask("pcl4", "alignment fix: PPSAlignmentConfigRcd registered, backport to 12\_0", ass="Mateusz", cons="Jan", resp="DPG", stat="open", pr="34845",
+	flags="new,new-gm", dep=deps("pcl3"));
+
+AddTask("pcl2", "alignment", ass="Mateusz", cons="Jan", resp="DPG", stat="prepare", dep=deps("pcl4"));
 
 
 
@@ -131,4 +136,4 @@ code for standard PPS procedure of mixing (rec-hit level) simu signal with PU fr
 
 //----------------------------------------
 
-MakePlot(360, "new");
+MakePlot(370, "new");
