@@ -54,7 +54,7 @@ the same z should be used by strip RPs, pixel RPs and optics
 //----------------------------------------
 AddCategory("reconstruction");
 
-AddTask("re2", "diamonds: SAMPIC readout support", ass="Chris", cons="Edoardo", resp="Valentina", stat="open", pr="34759", flags="new,new-gm");
+AddTask("re2", "diamonds: SAMPIC readout support", ass="Chris", cons="Edoardo", resp="Valentina", stat="merged", pr="34759", flags="new,new-gm");
 
 
 
@@ -90,12 +90,18 @@ AddTask("dqm9", "include PPS to T0 processing", ass="Fabrizio", resp="DPG", stat
 //----------------------------------------
 AddCategory("PCLs");
 
-AddTask("pcl3", "alignment fix: PPSAlignmentConfigRcd registered", ass="Mateusz", cons="Jan", resp="DPG", stat="open", pr="34844", flags="new,new-gm");
+AddTask("pcl3", "fix: PPSAlignmentConfigRcd registered", ass="Mateusz", cons="Jan", resp="DPG", stat="merged", pr="34844", flags="new,new-gm");
 
-AddTask("pcl4", "alignment fix: PPSAlignmentConfigRcd registered, backport to 12\_0", ass="Mateusz", cons="Jan", resp="DPG", stat="open", pr="34845",
+AddTask("pcl4", "fix: PPSAlignmentConfigRcd registered, backport to 12\_0", ass="Mateusz", cons="Jan", resp="DPG", stat="open", pr="34845",
 	flags="new,new-gm", dep=deps("pcl3"));
 
-AddTask("pcl2", "alignment", ass="Mateusz", cons="Jan", resp="DPG", stat="prepare", dep=deps("pcl4"));
+AddTask("pcl5", "update of alignment classes", ass="Mateusz", cons="Jan", resp="DPG", stat="prepare", pr="", flags="new,new-gm", dep=deps("pcl3"));
+
+AddTask("pcl6", "upload of alignment config", ass="Mateusz,Wagner", cons="Jan", resp="DPG", stat="prepare", pr="", flags="new,new-gm", dep=deps("pcl5"));
+
+AddTask("pcl7", "alignment PCL-like matrix workflow", ass="Mateusz", cons="Jan", resp="DPG", stat="prepare", dep=deps("pcl6"));
+
+AddTask("pcl8", "alignment in central PCL", ass="Mateusz", cons="Jan", resp="DPG", stat="pending", dep=deps("pcl7"));
 
 
 
