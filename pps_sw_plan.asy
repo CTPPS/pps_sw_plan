@@ -92,7 +92,7 @@ AddCategory("PCLs");
 
 AddTask("pcl3", "fix: PPSAlignmentConfigRcd registered", ass="Mateusz", cons="Jan", resp="DPG", stat="merged", pr="34844", flags="new,new-gm");
 
-AddTask("pcl4", "fix: PPSAlignmentConfigRcd registered, backport to 12\_0", ass="Mateusz", cons="Jan", resp="DPG", stat="open", pr="34845",
+AddTask("pcl4", "fix: PPSAlignmentConfigRcd registered, backport to 12\_0", ass="Mateusz", cons="Jan", resp="DPG", stat="merged", pr="34845",
 	flags="new,new-gm", dep=deps("pcl3"));
 
 AddTask("pcl5", "update of alignment classes", ass="Mateusz", cons="Jan", resp="DPG", stat="prepare", pr="", flags="new,new-gm", dep=deps("pcl3"));
