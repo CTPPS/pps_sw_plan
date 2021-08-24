@@ -172,7 +172,14 @@ void ProcessItems()
 				description = description + "\\\SmallerFonts " + it.comments;
 			}
 
-			string pr = (it.pr != "") ? "\ulink{https://github.com/cms-sw/cmssw/pull/" + it.pr + "}{\#" + it.pr + "}" : "";
+			string pr = "";
+			if (it.pr != "")
+			{
+				if (find(it.pr, "http") == 0)
+					pr = "\ulink{" + it.pr + "}{link}";
+				else
+					pr = "\ulink{https://github.com/cms-sw/cmssw/pull/" + it.pr + "}{\#" + it.pr + "}";
+			}
 
 			string line = BuildItemLine(it.tag, description, it.priority, it.assigned, it.consultant, it.responsible, it.due_date, pr);
 			label(it.pic, line, (0, 0), SE);

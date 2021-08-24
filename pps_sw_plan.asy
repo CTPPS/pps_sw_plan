@@ -15,7 +15,7 @@ AddCategory("geometry");
 
 AddTask("g14", "update pixels for Run3 -- XML files", ass="Fabrizio", resp="Jan, Luiz", stat="merged", dep=deps("g16"), flags="new,new-gm", pr="34499", comments="");
 
-AddTask("g19", "bugfix -- missing file", ass="Fabrizio", resp="", stat="open", dep=deps("g14"), flags="new,new-gm", pr="34588", comments="");
+AddTask("g19", "bugfix -- missing file", ass="Fabrizio", resp="", stat="merged", dep=deps("g14"), flags="new,new-gm", pr="34588", comments="");
 
 AddTask("g5", "fix overlaps of diamonds", ass="Gustavo", stat="done", flags="new,new-gm", dep=deps());
 
@@ -56,12 +56,18 @@ AddCategory("reconstruction");
 
 AddTask("re2", "diamonds: SAMPIC readout support", ass="Chris", cons="Edoardo", resp="Valentina", stat="merged", pr="34759", flags="new,new-gm");
 
+AddTask("re3", "update of N-F association cuts: class, DB infrastructure", ass="Grzegorz", cons="Jan", resp="", stat="prepare", pr="", flags="new,new-gm");
+
+AddTask("re4", "update of N-F association cuts: DB upload", ass="Wagner", cons="Jan", resp="", stat="pending", pr="", flags="new,new-gm", dep=deps("re3"));
+
+AddTask("re5", "update of N-F association cuts: use DB by default", ass="Grzegorz", cons="Jan", resp="", stat="pending", pr="", flags="new,new-gm", dep=deps("re4"));
+
 
 
 //----------------------------------------
 AddCategory("direct simulation");
 
-AddTask("ds4", "backport to 10\_6", pri="high", ass="Jan?", stat="pending", resp="POG", due="", dep=deps());
+AddTask("ds4", "backport to 10\_6", pri="", ass="", stat="pending", resp="POG", due="", dep=deps());
 
 
 
@@ -80,10 +86,9 @@ AddTask("dqm6", "timing RPs -- extract harvesting code to harverster modules", a
 
 AddTask("dqm7", "timing RPs -- adjust ranges for better readability", ass="Chris ?", resp="DPG", stat="pending", comments="");
 
-AddTask("dqm8", "add PPS to common sequences", ass="Fabrizio", resp="DPG", stat="open", pr="34454", flags="new,new-gm", comments="");
+AddTask("dqm8", "add PPS to common sequences", ass="Fabrizio", resp="DPG", stat="merged", pr="34454", flags="new,new-gm", comments="");
 
-// https://github.com/dmwm/T0/pull/4588
-AddTask("dqm9", "include PPS to T0 processing", ass="Fabrizio", resp="DPG", stat="open", pr="4588", flags="new,new-gm", comments="");
+AddTask("dqm9", "include PPS to T0 processing", ass="Fabrizio", resp="DPG", stat="open", pr="https://github.com/dmwm/T0/pull/4588", flags="new,new-gm", comments="");
 
 
 
