@@ -132,7 +132,7 @@ AddTask("fw2", "esConsumes in CondTools/CTPPS", ass="Jan", cons="", resp="", sta
 //----------------------------------------
 AddCategory("filters");
 
-AddTask("fi1", "PPS HLT filter for PCL", ass="Mariana", stat="open", pr="34827", flags="new-gm");
+AddTask("fi1", "PPS HLT filter for PCL", ass="Mariana", stat="merged", pr="34827", flags="new-gm");
 
 
 
