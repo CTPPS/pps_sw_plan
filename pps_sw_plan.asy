@@ -129,6 +129,8 @@ AddTask("fw1", "esConsumes in CalibPPS and DQM/CTPPS", ass="Fabrizio", cons="", 
 
 AddTask("fw2", "esConsumes in CondTools/CTPPS", ass="Jan", cons="", resp="", stat="merged", dep=deps(), pr="34377", flags="new-gm", comments="");
 
+AddTask("fw3", "address UBSAN warning in CTPPSPixelRecHits", ass="Fabrizio", cons="Jan", stat="merged", pr="35053", flags="new,new-gm");
+
 
 
 //----------------------------------------
