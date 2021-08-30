@@ -35,7 +35,7 @@ AddTask("g11", "organise files in Geometry/VeryForwardData/data", ass="a newcome
 
 AddTask("g2", "remove geometry specs from reco cff files", ass="Jan", stat="pending", dep=deps("g18"), comments="https://github.com/cms-sw/cmssw/issues/31360");
 
-AddTask("g12", "check compatibility of scoring plane z", pri="low", ass="Jan", resp="Fabrizio", stat="pending", due="", comments="
+AddTask("g12", "check compatibility of scoring plane z", ass="Jan", stat="prepare", due="", comments="
 the same z should be used by strip RPs, pixel RPs and optics
 ");
 
@@ -62,6 +62,7 @@ AddTask("re4", "update of N-F association cuts: DB upload", ass="Wagner", cons="
 
 AddTask("re5", "update of N-F association cuts: use DB by default", ass="Grzegorz", cons="Jan", resp="", stat="pending", pr="", flags="new-gm", dep=deps("re4"));
 
+AddTask("re6", "pixel Run3 data unpacking", ass="Fabrizio", stat="open", pr="35067", flags="new-swm,new-gm");
 
 
 //----------------------------------------
@@ -129,7 +130,7 @@ AddTask("fw1", "esConsumes in CalibPPS and DQM/CTPPS", ass="Fabrizio", cons="", 
 
 AddTask("fw2", "esConsumes in CondTools/CTPPS", ass="Jan", cons="", resp="", stat="merged", dep=deps(), pr="34377", flags="new-gm", comments="");
 
-AddTask("fw3", "address UBSAN warning in CTPPSPixelRecHits", ass="Fabrizio", cons="Jan", stat="merged", pr="35053", flags="new,new-gm");
+AddTask("fw3", "address UBSAN warning in CTPPSPixelRecHits", ass="Fabrizio", cons="Jan", stat="merged", pr="35053", flags="new-swm,new-gm");
 
 
 
