@@ -35,7 +35,7 @@ AddTask("g11", "organise files in Geometry/VeryForwardData/data", ass="a newcome
 
 AddTask("g2", "remove geometry specs from reco cff files", ass="Jan", stat="pending", dep=deps("g18"), comments="https://github.com/cms-sw/cmssw/issues/31360");
 
-AddTask("g12", "check compatibility of scoring plane z", ass="Jan", stat="prepare", due="", comments="
+AddTask("g12", "check compatibility of scoring plane z", ass="Jan", stat="open", pr="35085", comments="
 the same z should be used by strip RPs, pixel RPs and optics
 ");
 
