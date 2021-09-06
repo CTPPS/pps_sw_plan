@@ -40,7 +40,7 @@ the same z should be used by strip RPs, pixel RPs and optics
 ");
 
 AddTask("g20", "fix of PPSPixelTopology::isPixelHit", comments="bug was cutting high-x hits in direct simulation",
-	ass="Jan", cons="Fabrizio", stat="open", pr="35089", flags="new-swm,new-gm");
+	ass="Jan", cons="Fabrizio", stat="merged", pr="35089", flags="new-swm,new-gm");
 
 //----------------------------------------
 //AddCategory("optimisations");
@@ -63,7 +63,7 @@ AddTask("re4", "update of N-F association cuts: DB upload", ass="Wagner", cons="
 
 AddTask("re5", "update of N-F association cuts: use DB by default", ass="Grzegorz", cons="Jan", resp="", stat="pending", pr="", flags="new-gm", dep=deps("re4"));
 
-AddTask("re6", "pixel Run3 data unpacking", ass="Fabrizio", stat="open", pr="35067", flags="new-swm,new-gm");
+AddTask("re6", "pixel Run3 data unpacking", ass="Fabrizio", stat="merged", pr="35067", flags="new-swm,new-gm");
 
 
 //----------------------------------------
@@ -110,7 +110,7 @@ AddTask("pcl7", "alignment -- PCL-like matrix workflow", ass="Mateusz", cons="Ja
 
 AddTask("pcl8", "alignment -- inclusion in central PCL", ass="Mateusz", cons="Jan", resp="DPG", stat="pending", dep=deps("pcl7"));
 
-AddTask("pcl9", "diamond sampic -- offset calibration", ass="Chris", cons="", resp="DPG", stat="open", dep=deps(), flags="new-swm,new-gm", pr="35029");
+AddTask("pcl9", "diamond sampic -- offset calibration", ass="Chris", cons="", resp="DPG", stat="merged", dep=deps(), flags="new-swm,new-gm", pr="35029");
 
 
 
