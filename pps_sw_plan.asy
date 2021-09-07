@@ -102,7 +102,7 @@ AddTask("pcl3", "alignment -- PPSAlignmentConfigRcd registered", ass="Mateusz", 
 AddTask("pcl4", "alignment -- PPSAlignmentConfigRcd registered, backport to 12\_0", ass="Mateusz", cons="Jan", resp="DPG", stat="merged", pr="34845",
 	flags="new-gm", dep=deps("pcl3"));
 
-AddTask("pcl5", "alignment -- update of config classes", ass="Mateusz", cons="Jan", resp="DPG", stat="prepare", pr="", flags="new-gm", dep=deps("pcl3"));
+AddTask("pcl5", "alignment -- update of config classes", ass="Mateusz", cons="Jan", resp="DPG", stat="open", pr="35174", flags="new-swm,new-gm", dep=deps("pcl3"));
 
 AddTask("pcl6", "alignment -- upload of alignment config", ass="Mateusz,Wagner", cons="Jan", resp="DPG", stat="prepare", pr="", flags="new-gm", dep=deps("pcl5"));
 
