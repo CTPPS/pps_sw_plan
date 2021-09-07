@@ -35,7 +35,7 @@ AddTask("g11", "organise files in Geometry/VeryForwardData/data", ass="a newcome
 
 AddTask("g2", "remove geometry specs from reco cff files", ass="Jan", stat="pending", dep=deps("g18"), comments="https://github.com/cms-sw/cmssw/issues/31360");
 
-AddTask("g12", "check compatibility of scoring plane z", ass="Jan", stat="open", pr="35085", flags="new-swm,new-gm", comments="
+AddTask("g12", "check compatibility of scoring plane z", ass="Jan", stat="merged", pr="35085", flags="new-swm,new-gm", comments="
 the same z should be used by strip RPs, pixel RPs and optics
 ");
 
@@ -66,10 +66,13 @@ AddTask("re5", "update of N-F association cuts: use DB by default", ass="Grzegor
 AddTask("re6", "pixel Run3 data unpacking", ass="Fabrizio", stat="merged", pr="35067", flags="new-swm,new-gm");
 
 
+
 //----------------------------------------
 AddCategory("direct simulation");
 
 AddTask("ds4", "backport to 10\_6", pri="", ass="", stat="pending", resp="POG", due="", dep=deps());
+
+AddTask("ds5", "2022 profile", ass="Jan", resp="POG", stat="open", pr="35177", flags="new-swm,new-gm", comments="new optics, all optics config in a single file");
 
 
 
