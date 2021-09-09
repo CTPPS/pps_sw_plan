@@ -72,7 +72,7 @@ AddCategory("direct simulation");
 
 AddTask("ds4", "backport to 10\_6", pri="", ass="", stat="pending", resp="POG", due="", dep=deps());
 
-AddTask("ds5", "2022 profile", ass="Jan", resp="POG", stat="open", pr="35177", flags="new-swm,new-gm", comments="new optics, all optics config in a single file");
+AddTask("ds5", "2022 profile", ass="Jan", resp="POG", stat="merged", pr="35177", flags="new-swm,new-gm", comments="new optics, all optics config in a single file");
 
 
 
