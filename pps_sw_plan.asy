@@ -57,7 +57,7 @@ AddCategory("reconstruction");
 
 AddTask("re2", "diamonds: SAMPIC readout support", ass="Chris", cons="Edoardo", resp="Valentina", stat="merged", pr="34759", flags="new-gm");
 
-AddTask("re3", "update of N-F association cuts: class, DB infrastructure", ass="Grzegorz", cons="Jan", resp="", stat="prepare", pr="", flags="new-gm");
+AddTask("re3", "update of N-F association cuts: class, DB infrastructure", ass="Grzegorz", cons="Jan", resp="", stat="open", pr="35248", flags="new-swm,new-gm");
 
 AddTask("re4", "update of N-F association cuts: DB upload", ass="Wagner", cons="Jan", resp="", stat="pending", pr="", flags="new-gm", dep=deps("re3"));
 
