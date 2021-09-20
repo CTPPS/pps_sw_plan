@@ -13,13 +13,14 @@ import code;
 //----------------------------------------
 AddCategory("geometry");
 
-AddTask("g7", "final upload of Run3 geometry XML to DB", ass="Wagner", resp="Fabrizio", stat="pending", dep=deps());
+AddTask("g1", "final Run3 geometry update (XML)", ass="Fabrizio, Gustavo", stat="prepare", flags="new-swm,new-gm");
 
-AddTask("g8", "pre-processed geometry to DB", ass="Wagner", cons="AlCa", resp="Fabrizio", stat="prepare", dep=deps(), comments="
-also inclusion to GT
-");
+AddTask("g7", "upload of geometry to DB (fileblob)", ass="Wagner", resp="Fabrizio", stat="pending", dep=deps("g1"));
 
-AddTask("g18", "default reco sequence uses pre-processed geometry", ass="Wagner", cons="Jan", resp="Fabrizio", stat="open", pr="34549", dep=deps("g8"), flags="", comments="");
+AddTask("g8", "upload of ggometry to DB (pre-processed)", ass="Wagner", cons="", resp="Fabrizio", stat="pending", dep=deps("g1"), comments="also GT update");
+
+AddTask("g18", "default reco sequence uses pre-processed geometry", ass="Wagner", cons="Jan", resp="Fabrizio", stat="open", pr="34549",
+	dep=deps(), flags="", comments="");
 
 AddTask("g2", "remove geometry specs from reco cff files", ass="", stat="pending", dep=deps("g18"), comments="https://github.com/cms-sw/cmssw/issues/31360");
 
@@ -83,7 +84,7 @@ AddTask("pcl6", "alignment -- upload of alignment config", ass="Mateusz,Wagner",
 
 AddTask("pcl7", "alignment -- PCL-like matrix workflow", ass="Mateusz", cons="Jan", resp="DPG", stat="prepare", dep=deps("pcl6"));
 
-AddTask("pcl8", "alignment -- inclusion in central PCL", ass="Mateusz", cons="Jan", resp="DPG", stat="pending", dep=deps("pcl7"));
+AddTask("pcl8", "alignment -- inclusion in central PCL", ass="AlCa", cons="", resp="DPG", stat="pending", dep=deps("pcl7"));
 
 
 
