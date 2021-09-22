@@ -256,3 +256,16 @@ void MakePlot(real width = 360, string highlight_flag="new")
 	ProcessItems();
 	PlotItems(width, highlight_flag);
 }
+
+//----------------------------------------------------------------------------------------------------
+
+texpreamble("\def\\{\hfil\break}");
+texpreamble("\def\cBlack{\pdfliteral{0 0 0 1 k}}");
+texpreamble("\def\cBlue{\pdfliteral{1 1 0 0 k}}");
+texpreamble("\def\cRed{\pdfliteral{0 0.8 0.8 0 k}}");
+
+texpreamble("\def\SmallerFonts{}");
+
+texpreamble("\def\uline#1{\vtop{\hbox{#1}\vskip.5mm\vskip-\prevdepth\hrule\vskip1.5mm}}");
+texpreamble("\def\link#1#2{\pdfstartlink attr{/Border [0 0 0]} user{/Subtype/Link/A<</Type/Action/S/URI/URI(#1)>>}#2\pdfendlink}");
+texpreamble("\def\ulink#1#2{\uline{\link{#1}{#2}}}");
