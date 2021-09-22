@@ -10,7 +10,7 @@ on:
     types: [ published ]
 
 jobs:
-  test_and_deploy:
+  build_pdf:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
@@ -19,3 +19,15 @@ jobs:
       - name: install necessary packages
         run: |
           sudo apt-get -y install asymptote
+
+      - name: compile PDF file
+        run: |
+          asy -f pdf -tex pdftex pps_sw_plan.asy
+
+      - name: upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: PDF file
+          path: |
+            pps_sw_plan.pdf
+          if-no-files-found: error
