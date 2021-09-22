@@ -41,7 +41,7 @@ AddTask("g11", "organise files in Geometry/VeryForwardData/data", ass="a newcome
 //----------------------------------------
 AddCategory("reconstruction");
 
-AddTask("re3", "update of N-F association cuts: class, DB infrastructure", ass="Grzegorz", cons="Jan", resp="", stat="open", pr="35248", flags="");
+AddTask("re3", "update of N-F association cuts: class, DB infrastructure", ass="Grzegorz", cons="Jan", resp="", stat="merged", pr="35248", flags="");
 
 AddTask("re4", "update of N-F association cuts: DB upload", ass="Wagner", cons="Jan", resp="", stat="pending", pr="", flags="", dep=deps("re3"));
 
