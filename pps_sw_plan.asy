@@ -13,7 +13,7 @@ import code;
 //----------------------------------------
 AddCategory("geometry");
 
-AddTask("g1", "final Run3 geometry update (XML)", ass="Fabrizio, Gustavo", stat="prepare", flags="new-swm,new-gm");
+AddTask("g1", "final Run3 geometry update (XML)", ass="Fabrizio, Gustavo", stat="open", pr="35346", flags="new-swm,new-gm");
 
 AddTask("g7", "upload of geometry to DB (fileblob)", ass="Wagner", resp="Fabrizio", stat="pending", dep=deps("g1"));
 
@@ -41,7 +41,7 @@ AddTask("g11", "organise files in Geometry/VeryForwardData/data", ass="a newcome
 //----------------------------------------
 AddCategory("reconstruction");
 
-AddTask("re3", "update of N-F association cuts: class, DB infrastructure", ass="Grzegorz", cons="Jan", resp="", stat="merged", pr="35248", flags="");
+AddTask("re3", "update of N-F association cuts: class, DB infrastructure", ass="Grzegorz", cons="Jan", resp="", stat="merged", pr="35248", flags="new-swm,new-gm");
 
 AddTask("re4", "update of N-F association cuts: DB upload", ass="Wagner", cons="Jan", resp="", stat="pending", pr="", flags="", dep=deps("re3"));
 
