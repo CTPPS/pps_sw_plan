@@ -15,7 +15,9 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v2
-      
+        with:
+          ref: ${{ github.head_ref }}
+
       - name: install necessary packages
         run: |
           sudo apt-get -y install asymptote
@@ -31,3 +33,17 @@ jobs:
           path: |
             pps_sw_plan.pdf
           if-no-files-found: error
+
+      - name: automatically commit PDF file
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          # Optional, but recommended
+          # Defaults to "Apply automatic changes"
+          commit_message: Automatically generated PDF file
+
+          # Optional glob pattern of files which should be added to the commit
+          # Defaults to all (.)
+          # See the `pathspec`-documentation for git
+          # - https://git-scm.com/docs/git-add#Documentation/git-add.txt-ltpathspecgt82308203
+          # - https://git-scm.com/docs/gitglossary#Documentation/gitglossary.txt-aiddefpathspecapathspec
+          file_pattern: *.pdf
