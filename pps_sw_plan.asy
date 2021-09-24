@@ -122,5 +122,4 @@ code for standard PPS procedure of mixing (rec-hit level) simu signal with PU fr
 
 
 //----------------------------------------
-
 MakePlot(370, "new-swm");
