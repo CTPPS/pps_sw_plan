@@ -1,0 +1,33 @@
+name: Build PDF using asymptote
+
+on:
+  push:
+    branches: [ master ]
+    tags: '*'
+  pull_request:
+    branches: [ master ]
+  release:
+    types: [ published ]
+
+jobs:
+  build_pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+      
+      - name: install necessary packages
+        run: |
+          sudo apt-get -y install asymptote
+
+      - name: compile PDF file
+        run: |
+          asy -f pdf -tex pdftex pps_sw_plan.asy
+
+      - name: upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: PDF file
+          path: |
+            pps_sw_plan.pdf
+          if-no-files-found: error
