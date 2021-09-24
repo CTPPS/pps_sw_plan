@@ -15,14 +15,16 @@ AddCategory("geometry");
 
 AddTask("g1", "final Run3 geometry update (XML)", ass="Fabrizio, Gustavo", stat="merged", pr="35380", flags="new-swm,new-gm");
 
-AddTask("g7", "upload of geometry to DB (fileblob)", ass="Wagner", resp="Fabrizio", stat="pending", dep=deps("g1"));
+AddTask("g2", "fix: submit missing files", ass="Gustavo", stat="open", pr="35399", flags="new-swm,new-gm", dep=deps("g1"));
 
-AddTask("g8", "upload of ggometry to DB (pre-processed)", ass="Wagner", cons="", resp="Fabrizio", stat="pending", dep=deps("g1"), comments="also GT update");
+AddTask("g7", "upload of geometry to DB (fileblob)", ass="Wagner", resp="Fabrizio", stat="pending", dep=deps("g2"));
+
+AddTask("g8", "upload of ggometry to DB (pre-processed)", ass="Wagner", cons="", resp="Fabrizio", stat="pending", dep=deps("g2"), comments="also GT update");
 
 AddTask("g18", "default reco sequence uses pre-processed geometry", ass="Wagner", cons="Jan", resp="Fabrizio", stat="open", pr="34549",
 	dep=deps(), flags="", comments="");
 
-AddTask("g2", "remove geometry specs from reco cff files", ass="", stat="pending", dep=deps("g18"), comments="https://github.com/cms-sw/cmssw/issues/31360");
+AddTask("g10", "remove geometry specs from reco cff files", ass="", stat="pending", dep=deps("g18"), comments="https://github.com/cms-sw/cmssw/issues/31360");
 
 AddTask("g11", "organise files in Geometry/VeryForwardData/data", ass="a newcomer", cons="Clemencia", resp="Fabrizio", stat="pending", dep=deps());
 
@@ -43,7 +45,7 @@ AddCategory("reconstruction");
 
 AddTask("re3", "update of N-F association cuts: class, DB infrastructure", ass="Grzegorz", cons="Jan", resp="", stat="merged", pr="35248", flags="new-swm,new-gm");
 
-AddTask("re4", "update of N-F association cuts: DB upload", ass="Wagner", cons="Jan", resp="", stat="pending", pr="", flags="", dep=deps("re3"));
+AddTask("re4", "update of N-F association cuts: DB upload", ass="Wagner", cons="Jan", resp="", stat="prepare", pr="", flags="", dep=deps("re3"));
 
 AddTask("re5", "update of N-F association cuts: use DB by default", ass="Grzegorz", cons="Jan", resp="", stat="pending", pr="", flags="", dep=deps("re4"));
 
@@ -51,6 +53,8 @@ AddTask("re5", "update of N-F association cuts: use DB by default", ass="Grzegor
 
 //----------------------------------------
 AddCategory("direct simulation");
+
+AddTask("ds1", "adjust 2022 alignment", pri="", ass="Jan", stat="prepare", pr="", dep=deps("g2"));
 
 AddTask("ds4", "backport to 10\_6", pri="", ass="", stat="pending", resp="POG", due="", dep=deps());
 
