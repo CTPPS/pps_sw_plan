@@ -13,7 +13,7 @@ import code;
 //----------------------------------------
 AddCategory("geometry");
 
-AddTask("g1", "final Run3 geometry update (XML)", ass="Fabrizio, Gustavo", stat="open", pr="35346", flags="new-swm,new-gm");
+AddTask("g1", "final Run3 geometry update (XML)", ass="Fabrizio, Gustavo", stat="merged", pr="35380", flags="new-swm,new-gm");
 
 AddTask("g7", "upload of geometry to DB (fileblob)", ass="Wagner", resp="Fabrizio", stat="pending", dep=deps("g1"));
 
