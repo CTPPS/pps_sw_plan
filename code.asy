@@ -108,8 +108,8 @@ string[] deps(... string[] d)
 string BuildItemLine(string tag, string description, string priority, string assigned_to, string consultant, string responsible, string due, string pr, string sd="")
 {
 	return "\hbox{\hbox to 1.5cm{" + tag + "\hfil}\hskip5mm\vtop{\hsize9cm " + description + "}\hbox to1.5cm{" + priority
-		+ "\hfil}\hbox to3cm{" + assigned_to + "\hfil}\hbox to3cm{" + consultant + "\hfil}\hbox to3cm{" + responsible
-		+ "\hfil}\hbox to2cm{" + due + "\hfil}\hbox to1.3cm{" + pr + "\hfil}\hbox to5cm{" + sd + "\hfil}}";
+		+ "\hfil}\hbox to3.5cm{" + assigned_to + "\hfil}\hbox to3cm{" + consultant + "\hfil}\hbox to3cm{" + responsible
+		+ "\hfil}\hbox to2cm{" + due + "\hfil}\hbox to1.5cm{" + pr + "\hfil}\hbox to5cm{" + sd + "\hfil}}";
 }
 
 //----------------------------------------------------------------------------------------------------
@@ -206,7 +206,7 @@ void PlotItems(real width, string highlight_flag)
 {
 	unitsize(1mm);
 
-	real x0 = 250, dy = 3;
+	real x0 = 257, dy = 3;
 
 	label(BuildItemLine("\bf tag", "\noindent\hskip-5mm\bf task", "\bf priority", "\bf assignee", "\bf consultant", "\bf responsible", "\bf due date", "\bf PR", "\bf status + dependence"), (0, -5), E);
 
