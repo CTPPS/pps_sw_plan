@@ -28,7 +28,7 @@ AddTask("g10", "remove geometry specs from reco cff files", ass="", stat="pendin
 
 AddTask("g11", "organise files in Geometry/VeryForwardData/data", ass="a newcomer", cons="Clemencia", resp="Fabrizio", stat="pending", dep=deps());
 
-AddTask("g19", "disable building of misaligned geometry by default", ass="Jan", stat="open", pr="35423", comments="misaligned geometry causes problems in PPS HLT\\ sequence (probably due to missing conditions in DB)");
+AddTask("g19", "disable building of misaligned geometry by default", ass="Jan", stat="merged", pr="35423", flags="new-swm,new-gm", comments="misaligned geometry causes problems in PPS HLT\\ sequence (probably due to missing conditions in DB)");
 
 
 
@@ -67,11 +67,10 @@ AddCategory("DQM");
 
 AddTask("dqm2", "timing RPs -- add new Run3 RPs", ass="Laurent?", resp="DPG", stat="prep", dep=deps());
 
-AddTask("dqm3", "timing RPs -- config flags to enable/disable plots for online/offline DQM", ass="", resp="DPG", stat="pending", comments="");
-
 AddTask("dqm4", "timing RPs -- acquisition window size steered with a run-time parameter", ass="", resp="DPG", stat="pending", comments="");
 
-AddTask("dqm5", "timing RPs -- TotemTimingDQMSource adapted for SAMPIC", ass="Chris ?", resp="DPG", stat="pending", comments="");
+AddTask("dqm5", "timing RPs -- support for SAMPIC readout", ass="Chris", resp="DPG", stat="open", pr="35445", flags="new-swm,new-gm",
+	comments="adds sampic reco to the standard PPS reco sequence, for PPS DQM sequence it removes TOTEM timing and adds diamond sampic, in the DQM module it adds flags to enable/disable plots for online/offline DQM");
 
 AddTask("dqm6", "timing RPs -- extract harvesting code to harverster modules", ass="", resp="DPG", stat="pending", comments="");
 
@@ -79,6 +78,7 @@ AddTask("dqm7", "timing RPs -- adjust ranges for better readability", ass="Chris
 
 AddTask("dqm9", "include PPS to T0 processing", ass="Fabrizio", resp="DPG", stat="open", pr="https://github.com/dmwm/T0/pull/4588", flags="", comments="");
 
+AddTask("dqm10", "timing RPs -- update diamond DQM", ass="Chris", resp="DPG", stat="open", pr="35454", flags="new-swm,new-gm");
 
 
 //----------------------------------------
