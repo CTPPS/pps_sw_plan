@@ -13,9 +13,9 @@ import code;
 //----------------------------------------
 AddCategory("geometry");
 
-AddTask("g1", "final Run3 geometry update (XML)", ass="Fabrizio, Gustavo", stat="merged", pr="35380", flags="new-swm,new-gm");
+AddTask("g1", "final Run3 geometry update (XML)", ass="Fabrizio, Gustavo", stat="merged", pr="35380", flags="new-gm");
 
-AddTask("g2", "fix: submit missing files", ass="Gustavo", stat="merged", pr="35399", flags="new-swm,new-gm", dep=deps("g1"));
+AddTask("g2", "fix: submit missing files", ass="Gustavo", stat="merged", pr="35399", flags="new-gm", dep=deps("g1"));
 
 AddTask("g7", "upload of geometry to DB (fileblob)", ass="Wagner", resp="Fabrizio", stat="pending", dep=deps("g2"));
 
@@ -28,7 +28,7 @@ AddTask("g10", "remove geometry specs from reco cff files", ass="", stat="pendin
 
 AddTask("g11", "organise files in Geometry/VeryForwardData/data", ass="a newcomer", cons="Clemencia", resp="Fabrizio", stat="pending", dep=deps());
 
-AddTask("g19", "disable building of misaligned geometry by default", ass="Jan", stat="merged", pr="35423", flags="new-swm,new-gm", comments="misaligned geometry causes problems in PPS HLT\\ sequence (probably due to missing conditions in DB)");
+AddTask("g19", "disable building of misaligned geometry by default", ass="Jan", stat="merged", pr="35423", flags="new-gm", comments="misaligned geometry causes problems in PPS HLT\\ sequence (probably due to missing conditions in DB)");
 
 
 
@@ -45,7 +45,7 @@ AddTask("g19", "disable building of misaligned geometry by default", ass="Jan", 
 //----------------------------------------
 AddCategory("reconstruction");
 
-AddTask("re3", "update of N-F association cuts: class, DB infrastructure", ass="Grzegorz", cons="Jan", resp="", stat="merged", pr="35248", flags="new-swm,new-gm");
+AddTask("re3", "update of N-F association cuts: class, DB infrastructure", ass="Grzegorz", cons="Jan", resp="", stat="merged", pr="35248", flags="new-gm");
 
 AddTask("re4", "update of N-F association cuts: DB upload", ass="Wagner", cons="Jan", resp="", stat="prepare", pr="", flags="", dep=deps("re3"));
 
@@ -56,7 +56,7 @@ AddTask("re5", "update of N-F association cuts: use DB by default", ass="Grzegor
 //----------------------------------------
 AddCategory("direct simulation");
 
-AddTask("ds1", "adjust Run3 alignment", pri="", ass="Jan", stat="open", pr="35424", dep=deps("g2"), flags="new-swm,new-gm");
+AddTask("ds1", "adjust Run3 alignment", pri="", ass="Jan", stat="open", pr="35424", dep=deps("g2"), flags="new-gm");
 
 AddTask("ds4", "backport to CMSSW 10\_6", pri="", ass="", stat="pending", resp="POG", due="", dep=deps(), comments="backport of features only available in 11\_X/12\_X to the release used for Run2 analyses");
 
@@ -67,24 +67,20 @@ AddCategory("DQM");
 
 AddTask("dqm2", "timing RPs -- add new Run3 RPs", ass="Laurent?", resp="DPG", stat="prep", dep=deps());
 
-AddTask("dqm4", "timing RPs -- acquisition window size steered with a run-time parameter", ass="", resp="DPG", stat="pending", comments="");
-
-AddTask("dqm5", "timing RPs -- support for SAMPIC readout", ass="Chris", resp="DPG", stat="open", pr="35445", flags="new-swm,new-gm",
+AddTask("dqm5", "timing RPs -- support for SAMPIC readout", ass="Chris", resp="DPG", stat="open", pr="35445", flags="new-gm",
 	comments="adds sampic reco to the standard PPS reco sequence, for PPS DQM sequence it removes TOTEM timing and adds diamond sampic, in the DQM module it adds flags to enable/disable plots for online/offline DQM");
+
+AddTask("dqm10", "timing RPs -- update diamond DQM", ass="Chris", resp="DPG", stat="open", pr="35454", flags="new-gm");
 
 AddTask("dqm6", "timing RPs -- extract harvesting code to harverster modules", ass="", resp="DPG", stat="pending", comments="");
 
-AddTask("dqm7", "timing RPs -- adjust ranges for better readability", ass="Chris ?", resp="DPG", stat="pending", comments="");
-
 AddTask("dqm9", "include PPS to T0 processing", ass="Fabrizio", resp="DPG", stat="open", pr="https://github.com/dmwm/T0/pull/4588", flags="", comments="");
-
-AddTask("dqm10", "timing RPs -- update diamond DQM", ass="Chris", resp="DPG", stat="open", pr="35454", flags="new-swm,new-gm");
 
 
 //----------------------------------------
 AddCategory("PCLs");
 
-AddTask("pcl5", "alignment -- update of config classes", ass="Mateusz", cons="Jan", resp="DPG", stat="merged", pr="35174", flags="new-swm,new-gm", dep=deps());
+AddTask("pcl5", "alignment -- update of config classes", ass="Mateusz", cons="Jan", resp="DPG", stat="merged", pr="35174", flags="new-gm", dep=deps());
 
 AddTask("pcl6", "alignment -- upload of alignment config", ass="Mateusz,Wagner", cons="Jan", resp="DPG", stat="prepare", pr="", flags="", dep=deps("pcl5"));
 
@@ -124,4 +120,4 @@ code for standard PPS procedure of mixing (rec-hit level) simu signal with PU fr
 
 
 //----------------------------------------
-MakePlot(370, "new-swm");
+MakePlot(330, "new-swm");
