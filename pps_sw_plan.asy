@@ -70,7 +70,7 @@ AddTask("dqm5", "timing RPs -- support for SAMPIC readout", ass="Chris", resp="D
 
 AddTask("dqm10", "timing RPs -- update diamond DQM", ass="Chris", resp="DPG", stat="open", pr="35454", flags="new-gm");
 
-AddTask("dqm11", "common module -- update RP ids", ass="Jan", resp="DPG", stat="open", pr="35484", flags="new-swm,new-gm");
+AddTask("dqm11", "common module -- update RP ids", ass="Jan", resp="DPG", stat="merged", pr="35484", flags="new-swm,new-gm");
 
 AddTask("dqm6", "timing RPs -- extract harvesting code to harverster modules", ass="", resp="DPG", stat="pending", comments="");
 
