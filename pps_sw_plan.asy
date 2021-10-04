@@ -56,7 +56,7 @@ AddTask("re5", "update of N-F association cuts: use DB by default", ass="Grzegor
 //----------------------------------------
 AddCategory("direct simulation");
 
-AddTask("ds1", "adjust Run3 alignment", pri="", ass="Jan", stat="open", pr="35424", dep=deps("g2"), flags="new-gm");
+AddTask("ds1", "adjust Run3 alignment", pri="", ass="Jan", stat="merged", pr="35424", dep=deps("g2"), flags="new-swm,new-gm");
 
 AddTask("ds4", "backport to CMSSW 10\_6", pri="", ass="", stat="pending", resp="POG", due="", dep=deps(), comments="backport of features only available in 11\_X/12\_X to the release used for Run2 analyses");
 
