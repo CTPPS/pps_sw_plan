@@ -76,6 +76,10 @@ AddTask("dqm6", "timing RPs -- extract harvesting code to harverster modules", a
 
 AddTask("dqm9", "include PPS to T0 processing", ass="Fabrizio", resp="DPG", stat="open", pr="https://github.com/dmwm/T0/pull/4588", flags="", comments="");
 
+AddTask("dqm12", "use Run3 era in online DQM, fix in master", ass="Jan", stat="open", pr="35550", flags="new-swm,new-gm");
+
+AddTask("dqm13", "use Run3 era in online DQM, backport to 12\_0", ass="Jan", stat="open", pr="35551", flags="new-swm,new-gm", dep=deps("dqm12"));
+
 
 //----------------------------------------
 AddCategory("PCLs");
