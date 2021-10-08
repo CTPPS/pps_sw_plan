@@ -72,7 +72,9 @@ AddTask("dqm10", "timing RPs -- update diamond DQM", ass="Chris", resp="DPG", st
 
 AddTask("dqm11", "common module -- update RP ids", ass="Jan", resp="DPG", stat="merged", pr="35484", flags="new-swm,new-gm");
 
-AddTask("dqm6", "timing RPs -- extract harvesting code to harverster modules", ass="", resp="DPG", stat="pending", comments="");
+AddTask("dqm6", "timing RPs -- extract harvesting code to harverster modules", ass="", resp="DPG", stat="pending", comments="
+and add per-LS plots
+");
 
 AddTask("dqm9", "include PPS to T0 processing", ass="Fabrizio", resp="DPG", stat="open", pr="https://github.com/dmwm/T0/pull/4588", flags="", comments="");
 
@@ -105,7 +107,15 @@ by default, this would be disabled, but available for private use
 
 
 //----------------------------------------
-//AddCategory("framework");
+AddCategory("framework");
+
+AddTask("fmw1", "UBSAN issue in TotemSampicFrame", ass="Chris", stat="prepare", pr="", comments="
+details in \ulink{https://github.com/cms-sw/cmssw/issues/35012#issuecomment-937741753}{here}
+");
+
+AddTask("fmw2", "UBSAN issue in CTPPSPixelDigiToRaw", ass="", stat="pending", pr="", comments="
+details in \ulink{https://github.com/cms-sw/cmssw/issues/35012#issuecomment-937741753}{here}
+");
 
 
 
