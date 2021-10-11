@@ -113,7 +113,7 @@ AddTask("fmw1", "UBSAN issue in TotemSampicFrame", ass="Chris", stat="prepare", 
 details in \ulink{https://github.com/cms-sw/cmssw/issues/35012#issuecomment-937741753}{here}
 ");
 
-AddTask("fmw2", "UBSAN issue in CTPPSPixelDigiToRaw", ass="", stat="pending", pr="", comments="
+AddTask("fmw2", "UBSAN issue in CTPPSPixelDigiToRaw", ass="Fabrizio", stat="open", pr="35592", comments="
 details in \ulink{https://github.com/cms-sw/cmssw/issues/35012#issuecomment-937741753}{here}
 ");
 
