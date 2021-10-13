@@ -56,7 +56,7 @@ AddTask("re5", "update of N-F association cuts: use DB by default", ass="Grzegor
 //----------------------------------------
 AddCategory("direct simulation");
 
-AddTask("ds1", "adjust Run3 alignment", pri="", ass="Jan", stat="merged", pr="35424", dep=deps("g2"), flags="new-swm,new-gm");
+AddTask("ds1", "adjust Run3 alignment", pri="", ass="Jan", stat="merged", pr="35424", dep=deps("g2"), flags="new-gm");
 
 AddTask("ds4", "backport to CMSSW 10\_6", pri="", ass="", stat="pending", resp="POG", due="", dep=deps(), comments="backport of features only available in 11\_X/12\_X to the release used for Run2 analyses");
 
@@ -70,7 +70,7 @@ AddTask("dqm5", "timing RPs -- support for SAMPIC readout", ass="Chris", resp="D
 
 AddTask("dqm10", "timing RPs -- update diamond DQM", ass="Chris", resp="DPG", stat="open", pr="35454", flags="new-gm");
 
-AddTask("dqm11", "common module -- update RP ids", ass="Jan", resp="DPG", stat="merged", pr="35484", flags="new-swm,new-gm");
+AddTask("dqm11", "common module -- update RP ids", ass="Jan", resp="DPG", stat="merged", pr="35484", flags="new-gm");
 
 AddTask("dqm6", "timing RPs -- extract harvesting code to harverster modules", ass="", resp="DPG", stat="pending", comments="
 and add per-LS plots
@@ -78,9 +78,9 @@ and add per-LS plots
 
 AddTask("dqm9", "include PPS to T0 processing", ass="Fabrizio", resp="DPG", stat="open", pr="https://github.com/dmwm/T0/pull/4588", flags="", comments="");
 
-AddTask("dqm12", "use Run3 era in online DQM, fix in master", ass="Jan", stat="merged", pr="35550", flags="new-swm,new-gm");
+AddTask("dqm12", "use Run3 era in online DQM, fix in master", ass="Jan", stat="merged", pr="35550", flags="new-gm");
 
-AddTask("dqm13", "use Run3 era in online DQM, backport to 12\_0", ass="Jan", stat="open", pr="35551", flags="new-swm,new-gm", dep=deps("dqm12"));
+AddTask("dqm13", "use Run3 era in online DQM, backport to 12\_0", ass="Jan", stat="open", pr="35551", flags="new-gm", dep=deps("dqm12"));
 
 
 //----------------------------------------
@@ -88,9 +88,9 @@ AddCategory("PCLs");
 
 AddTask("pcl5", "alignment -- update of config classes", ass="Mateusz", cons="Jan", resp="DPG", stat="merged", pr="35174", flags="new-gm", dep=deps());
 
-AddTask("pcl6", "alignment -- upload of alignment config", ass="Mateusz,Wagner", cons="Jan", resp="DPG", stat="done", pr="", flags="new-swm,new-gm", dep=deps("pcl5"));
+AddTask("pcl6", "alignment -- upload of alignment config", ass="Mateusz,Wagner", cons="Jan", resp="DPG", stat="done", pr="", flags="new-gm", dep=deps("pcl5"));
 
-AddTask("pcl7", "alignment -- PCL-like matrix workflow", ass="Mateusz", cons="Jan", resp="DPG", stat="open", pr="35631", flags="new-swm,new-gm", dep=deps("pcl6"));
+AddTask("pcl7", "alignment -- PCL-like matrix workflow", ass="Mateusz", cons="Jan", resp="DPG", stat="open", pr="35631", flags="new-gm", dep=deps("pcl6"));
 
 AddTask("pcl8", "alignment -- inclusion in central PCL", ass="AlCa", cons="", resp="DPG", stat="pending", dep=deps("pcl7"));
 
@@ -109,11 +109,11 @@ by default, this would be disabled, but available for private use
 //----------------------------------------
 AddCategory("framework");
 
-AddTask("fmw1", "UBSAN issue in TotemSampicFrame", ass="Chris", stat="prepare", pr="", flags="new-swm,new-gm", comments="
+AddTask("fmw1", "UBSAN issue in TotemSampicFrame", ass="Chris", stat="open", pr="35654", flags="new-gm", comments="
 details in \ulink{https://github.com/cms-sw/cmssw/issues/35012#issuecomment-937741753}{here}
 ");
 
-AddTask("fmw2", "UBSAN issue in CTPPSPixelDigiToRaw", ass="Fabrizio", stat="merged", pr="35592", flags="new-swm,new-gm", comments="
+AddTask("fmw2", "UBSAN issue in CTPPSPixelDigiToRaw", ass="Fabrizio", stat="merged", pr="35592", flags="new-gm", comments="
 details in \ulink{https://github.com/cms-sw/cmssw/issues/35012#issuecomment-937741753}{here}
 ");
 
