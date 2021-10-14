@@ -65,7 +65,7 @@ AddTask("ds4", "backport to CMSSW 10\_6", pri="", ass="", stat="pending", resp="
 //----------------------------------------
 AddCategory("DQM");
 
-AddTask("dqm5", "timing RPs -- support for SAMPIC readout", ass="Chris", resp="DPG", stat="open", pr="35445", flags="new-gm",
+AddTask("dqm5", "timing RPs -- support for SAMPIC readout", ass="Chris", resp="DPG", stat="merged", pr="35445", flags="new-swm,new-gm",
 	comments="adds sampic reco to the standard PPS reco sequence, for PPS DQM sequence it removes TOTEM timing and adds diamond sampic, in the DQM module it adds flags to enable/disable plots for online/offline DQM");
 
 AddTask("dqm10", "timing RPs -- update diamond DQM", ass="Chris", resp="DPG", stat="open", pr="35454", flags="new-gm");
