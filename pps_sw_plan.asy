@@ -80,7 +80,7 @@ AddTask("dqm9", "include PPS to T0 processing", ass="Fabrizio", resp="DPG", stat
 
 AddTask("dqm12", "use Run3 era in online DQM, fix in master", ass="Jan", stat="merged", pr="35550", flags="new-gm");
 
-AddTask("dqm13", "use Run3 era in online DQM, backport to 12\_0", ass="Jan", stat="open", pr="35551", flags="new-gm", dep=deps("dqm12"));
+AddTask("dqm13", "use Run3 era in online DQM, backport to 12\_0", ass="Jan", stat="merged", pr="35551", flags="new-swm,new-gm", dep=deps("dqm12"));
 
 
 //----------------------------------------
