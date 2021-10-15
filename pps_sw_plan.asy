@@ -30,6 +30,10 @@ AddTask("g11", "organise files in Geometry/VeryForwardData/data", ass="a newcome
 
 AddTask("g19", "disable building of misaligned geometry by default", ass="Jan", stat="merged", pr="35423", flags="new-gm", comments="misaligned geometry causes problems in PPS HLT\\ sequence (probably due to missing conditions in DB)");
 
+AddTask("g20", "bug fix of Run2 pixel topology", ass="Fabrizio", cons="Jan", stat="merged", pr="35671", flags="new-swm,new-gm", comments="
+recovers low-x pixel acceptance in Run2 direct simu WFs
+");
+
 
 
 //----------------------------------------
@@ -68,7 +72,7 @@ AddCategory("DQM");
 AddTask("dqm5", "timing RPs -- support for SAMPIC readout", ass="Chris", resp="DPG", stat="merged", pr="35445", flags="new-swm,new-gm",
 	comments="adds sampic reco to the standard PPS reco sequence, for PPS DQM sequence it removes TOTEM timing and adds diamond sampic, in the DQM module it adds flags to enable/disable plots for online/offline DQM");
 
-AddTask("dqm10", "timing RPs -- update diamond DQM", ass="Chris", resp="DPG", stat="open", pr="35454", flags="new-gm");
+AddTask("dqm10", "timing RPs -- update diamond DQM", ass="Chris", resp="DPG", stat="merged", pr="35454", flags="new-swm,new-gm");
 
 AddTask("dqm11", "common module -- update RP ids", ass="Jan", resp="DPG", stat="merged", pr="35484", flags="new-gm");
 
