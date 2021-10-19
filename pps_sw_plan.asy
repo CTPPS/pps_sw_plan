@@ -113,7 +113,7 @@ by default, this would be disabled, but available for private use
 //----------------------------------------
 AddCategory("framework");
 
-AddTask("fmw1", "UBSAN issue in TotemSampicFrame", ass="Chris", stat="open", pr="35654", flags="new-gm", comments="
+AddTask("fmw1", "UBSAN issue in TotemSampicFrame", ass="Chris", stat="merged", pr="35654", flags="new-swm,new-gm", comments="
 details in \ulink{https://github.com/cms-sw/cmssw/issues/35012#issuecomment-937741753}{here}
 ");
 
