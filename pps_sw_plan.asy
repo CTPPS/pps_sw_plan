@@ -94,9 +94,12 @@ AddTask("pcl5", "alignment -- update of config classes", ass="Mateusz", cons="Ja
 
 AddTask("pcl6", "alignment -- upload of alignment config", ass="Mateusz,Wagner", cons="Jan", resp="DPG", stat="done", pr="", flags="new-gm", dep=deps("pcl5"));
 
-AddTask("pcl7", "alignment -- PCL-like matrix workflow", ass="Mateusz", cons="Jan", resp="DPG", stat="open", pr="35631", flags="new-gm", dep=deps("pcl6"));
+AddTask("pcl7", "alignment -- PCL-like matrix workflow", ass="Mateusz", cons="Jan", resp="DPG", stat="merged", pr="35631", flags="new-swm,new-gm", dep=deps("pcl6"));
 
 AddTask("pcl8", "alignment -- inclusion in central PCL", ass="AlCa", cons="", resp="DPG", stat="pending", dep=deps("pcl7"));
+
+AddTask("pcl9", "fix of matrix tests -- alignment and timing calibration", ass="Mateusz", cons="Jan", resp="DPG", stat="prepare", pr="35631",
+	flags="new-swm,new-gm", dep=deps("pcl7"));
 
 
 
