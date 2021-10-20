@@ -67,7 +67,7 @@ AddTask("ds4", "backport to CMSSW 10\_6", pri="", ass="", stat="pending", resp="
 
 
 //----------------------------------------
-AddCategory("DQM");
+AddCategory("DQM and validation plots");
 
 AddTask("dqm5", "timing RPs -- support for SAMPIC readout", ass="Chris", resp="DPG", stat="merged", pr="35445", flags="new-swm,new-gm",
 	comments="adds sampic reco to the standard PPS reco sequence, for PPS DQM sequence it removes TOTEM timing and adds diamond sampic, in the DQM module it adds flags to enable/disable plots for online/offline DQM");
@@ -85,6 +85,9 @@ AddTask("dqm9", "include PPS to T0 processing", ass="Fabrizio", resp="DPG", stat
 AddTask("dqm12", "use Run3 era in online DQM, fix in master", ass="Jan", stat="merged", pr="35550", flags="new-gm");
 
 AddTask("dqm13", "use Run3 era in online DQM, backport to 12\_0", ass="Jan", stat="merged", pr="35551", flags="new-swm,new-gm", dep=deps("dqm12"));
+
+AddTask("val1", "more validation plots", ass="Jan", stat="open", pr="35740", flags="new-swm,new-gm", comments="details of N-F association efficiency, distances between tracks in each RP, t bias and resolution 2D histogram");
+
 
 
 //----------------------------------------
