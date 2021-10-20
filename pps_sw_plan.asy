@@ -51,9 +51,9 @@ AddCategory("reconstruction");
 
 AddTask("re3", "update of N-F association cuts: class, DB infrastructure", ass="Grzegorz", cons="Jan", resp="", stat="merged", pr="35248", flags="new-gm");
 
-AddTask("re4", "update of N-F association cuts: DB upload", ass="Wagner", cons="Jan", resp="", stat="prepare", pr="", flags="", dep=deps("re3"));
+AddTask("re4", "update of N-F association cuts: DB upload", ass="Wagner", cons="Jan", resp="", stat="done", pr="", flags="new-swm,new-gm", dep=deps("re3"));
 
-AddTask("re5", "update of N-F association cuts: use DB by default", ass="Grzegorz", cons="Jan", resp="", stat="pending", pr="", flags="", dep=deps("re4"));
+AddTask("re5", "update of N-F association cuts: use DB by default", ass="Jan", cons="", resp="", stat="prepare", pr="", flags="new-swm,new-gm", dep=deps("re4"));
 
 
 
