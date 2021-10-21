@@ -53,7 +53,7 @@ AddTask("re3", "update of N-F association cuts: class, DB infrastructure", ass="
 
 AddTask("re4", "update of N-F association cuts: DB upload", ass="Wagner", cons="Jan", resp="", stat="done", pr="", flags="new-swm,new-gm", dep=deps("re3"));
 
-AddTask("re5", "update of N-F association cuts: use DB by default", ass="Jan", cons="", resp="", stat="prepare", pr="", flags="new-swm,new-gm", dep=deps("re4"));
+AddTask("re5", "update of N-F association cuts: use DB by default", ass="Jan", cons="", resp="", stat="open", pr="35766", flags="new-swm,new-gm", dep=deps("re4"));
 
 
 
