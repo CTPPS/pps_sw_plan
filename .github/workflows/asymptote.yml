@@ -34,8 +34,8 @@ jobs:
             pps_sw_plan.pdf
           if-no-files-found: error
 
-      - name: automatically commit PDF file
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: Automatically generated PDF file
-          file_pattern: '*.pdf'
+#       - name: automatically commit PDF file
+#         uses: stefanzweifel/git-auto-commit-action@v4
+#         with:
+#           commit_message: Automatically generated PDF file
+#           file_pattern: '*.pdf'
