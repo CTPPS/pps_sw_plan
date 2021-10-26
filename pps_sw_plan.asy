@@ -84,7 +84,7 @@ AddTask("dqm12", "use Run3 era in online DQM, fix in master", ass="Jan", stat="m
 
 AddTask("dqm13", "use Run3 era in online DQM, backport to 12\_0", ass="Jan", stat="merged", pr="35551", flags="new-swm,new-gm", dep=deps("dqm12"));
 
-AddTask("val1", "more validation plots", ass="Jan", stat="open", pr="35740", flags="new-swm,new-gm", comments="details of N-F association efficiency, distances between tracks in each RP, t bias and resolution 2D histogram");
+AddTask("val1", "more validation plots", ass="Jan", stat="merged", pr="35740", flags="new-swm,new-gm", comments="details of N-F association efficiency, distances between tracks in each RP, t bias and resolution 2D histogram");
 
 
 
