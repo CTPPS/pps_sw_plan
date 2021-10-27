@@ -20,7 +20,7 @@ AddTask("g2", "fix: submit missing files", ass="Gustavo", stat="merged", pr="353
 AddTask("g8", "upload of geometry to DB (pre-processed)", ass="Wagner", cons="", resp="Fabrizio", stat="pending", dep=deps("g2"), comments="also GT update");
 
 AddTask("g18", "default reco sequence uses pre-processed geometry", ass="Wagner, Helena", cons="Jan", resp="Fabrizio", stat="merged", pr="35772",
-	dep=deps(), flags="new-swm,new-gm", comments="");
+	dep=deps(), flags="new-gm", comments="");
 
 AddTask("g10", "remove geometry specs from reco cff files", ass="", stat="pending", dep=deps("g18"), comments="https://github.com/cms-sw/cmssw/issues/31360");
 
@@ -28,7 +28,7 @@ AddTask("g11", "organise files in Geometry/VeryForwardData/data", ass="a newcome
 
 AddTask("g19", "disable building of misaligned geometry by default", ass="Jan", stat="merged", pr="35423", flags="new-gm", comments="misaligned geometry causes problems in PPS HLT\\ sequence (probably due to missing conditions in DB)");
 
-AddTask("g20", "bug fix of Run2 pixel topology", ass="Fabrizio", cons="Jan", stat="merged", pr="35671", flags="new-swm,new-gm", comments="
+AddTask("g20", "bug fix of Run2 pixel topology", ass="Fabrizio", cons="Jan", stat="merged", pr="35671", flags="new-gm", comments="
 recovers low-x pixel acceptance in Run2 direct simu WFs
 ");
 
@@ -49,9 +49,9 @@ AddCategory("reconstruction");
 
 AddTask("re3", "update of N-F association cuts: class, DB infrastructure", ass="Grzegorz", cons="Jan", resp="", stat="merged", pr="35248", flags="new-gm");
 
-AddTask("re4", "update of N-F association cuts: DB upload", ass="Wagner", cons="Jan", resp="", stat="done", pr="", flags="new-swm,new-gm", dep=deps("re3"));
+AddTask("re4", "update of N-F association cuts: DB upload", ass="Wagner", cons="Jan", resp="", stat="done", pr="", flags="new-gm", dep=deps("re3"));
 
-AddTask("re5", "update of N-F association cuts: use DB by default", ass="Jan", cons="", resp="", stat="open", pr="35766", flags="new-swm,new-gm", dep=deps("re4"));
+AddTask("re5", "update of N-F association cuts: use DB by default", ass="Jan", cons="", resp="", stat="open", pr="35766", flags="new-gm", dep=deps("re4"));
 
 
 
@@ -67,10 +67,10 @@ AddTask("ds4", "backport to CMSSW 10\_6", pri="", ass="", stat="pending", resp="
 //----------------------------------------
 AddCategory("DQM and validation plots");
 
-AddTask("dqm5", "timing RPs -- support for SAMPIC readout", ass="Chris", resp="DPG", stat="merged", pr="35445", flags="new-swm,new-gm",
+AddTask("dqm5", "timing RPs -- support for SAMPIC readout", ass="Chris", resp="DPG", stat="merged", pr="35445", flags="new-gm",
 	comments="adds sampic reco to the standard PPS reco sequence, for PPS DQM sequence it removes TOTEM timing and adds diamond sampic, in the DQM module it adds flags to enable/disable plots for online/offline DQM");
 
-AddTask("dqm10", "timing RPs -- update diamond DQM", ass="Chris", resp="DPG", stat="merged", pr="35454", flags="new-swm,new-gm");
+AddTask("dqm10", "timing RPs -- update diamond DQM", ass="Chris", resp="DPG", stat="merged", pr="35454", flags="new-gm");
 
 AddTask("dqm11", "common module -- update RP ids", ass="Jan", resp="DPG", stat="merged", pr="35484", flags="new-gm");
 
@@ -82,9 +82,9 @@ AddTask("dqm9", "include PPS to T0 processing", ass="Fabrizio", resp="DPG", stat
 
 AddTask("dqm12", "use Run3 era in online DQM, fix in master", ass="Jan", stat="merged", pr="35550", flags="new-gm");
 
-AddTask("dqm13", "use Run3 era in online DQM, backport to 12\_0", ass="Jan", stat="merged", pr="35551", flags="new-swm,new-gm", dep=deps("dqm12"));
+AddTask("dqm13", "use Run3 era in online DQM, backport to 12\_0", ass="Jan", stat="merged", pr="35551", flags="new-gm", dep=deps("dqm12"));
 
-AddTask("val1", "more validation plots", ass="Jan", stat="merged", pr="35740", flags="new-swm,new-gm", comments="details of N-F association efficiency, distances between tracks in each RP, t bias and resolution 2D histogram");
+AddTask("val1", "more validation plots", ass="Jan", stat="merged", pr="35740", flags="new-gm", comments="details of N-F association efficiency, distances between tracks in each RP, t bias and resolution 2D histogram");
 
 
 
@@ -95,12 +95,14 @@ AddTask("pcl5", "alignment -- update of config classes", ass="Mateusz", cons="Ja
 
 AddTask("pcl6", "alignment -- upload of alignment config", ass="Mateusz,Wagner", cons="Jan", resp="DPG", stat="done", pr="", flags="new-gm", dep=deps("pcl5"));
 
-AddTask("pcl7", "alignment -- PCL-like matrix workflow", ass="Mateusz", cons="Jan", resp="DPG", stat="merged", pr="35631", flags="new-swm,new-gm", dep=deps("pcl6"));
+AddTask("pcl7", "alignment -- PCL-like matrix workflow", ass="Mateusz", cons="Jan", resp="DPG", stat="merged", pr="35631", flags="new-gm", dep=deps("pcl6"));
 
 AddTask("pcl8", "alignment -- inclusion in central PCL", ass="AlCa", cons="", resp="DPG", stat="pending", dep=deps("pcl7"));
 
-AddTask("pcl9", "fix of matrix tests -- alignment and timing calibration", ass="Mateusz", cons="Jan", resp="DPG", stat="prepare", pr="35631",
-	flags="new-swm,new-gm", dep=deps("pcl7"));
+AddTask("pcl9", "fix of matrix tests -- alignment and timing calibration", ass="Mateusz", cons="Jan", resp="DPG", stat="prepare", pr="",
+	flags="new-gm", dep=deps("pcl7"), comments="
+details in \ulink{https://github.com/cms-sw/cmssw/pull/35631}{here}
+");
 
 
 
@@ -117,7 +119,7 @@ by default, this would be disabled, but available for private use
 //----------------------------------------
 AddCategory("framework");
 
-AddTask("fmw1", "UBSAN issue in TotemSampicFrame", ass="Chris", stat="merged", pr="35654", flags="new-swm,new-gm", comments="
+AddTask("fmw1", "UBSAN issue in TotemSampicFrame", ass="Chris", stat="merged", pr="35654", flags="new-gm", comments="
 details in \ulink{https://github.com/cms-sw/cmssw/issues/35012#issuecomment-937741753}{here}
 ");
 
