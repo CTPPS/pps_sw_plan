@@ -17,7 +17,7 @@ AddTask("g1", "final Run3 geometry update (XML)", ass="Fabrizio, Gustavo", stat=
 
 AddTask("g2", "fix: submit missing files", ass="Gustavo", stat="merged", pr="35399", flags="new-gm", dep=deps("g1"));
 
-AddTask("g8", "upload of ggometry to DB (pre-processed)", ass="Wagner", cons="", resp="Fabrizio", stat="pending", dep=deps("g2"), comments="also GT update");
+AddTask("g8", "upload of geometry to DB (pre-processed)", ass="Wagner", cons="", resp="Fabrizio", stat="pending", dep=deps("g2"), comments="also GT update");
 
 AddTask("g18", "default reco sequence uses pre-processed geometry", ass="Wagner, Helena", cons="Jan", resp="Fabrizio", stat="merged", pr="35772",
 	dep=deps(), flags="new-swm,new-gm", comments="");

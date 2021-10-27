@@ -3,4 +3,4 @@ image:
 
 tasks:
   - init: ls
-    command: ls
+    command: asy -f pdf -tex pdftex pps_sw_plan.asy
