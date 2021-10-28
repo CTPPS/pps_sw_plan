@@ -99,9 +99,9 @@ AddTask("pcl7", "alignment -- PCL-like matrix workflow", ass="Mateusz", cons="Ja
 
 AddTask("pcl8", "alignment -- inclusion in central PCL", ass="AlCa", cons="", resp="DPG", stat="pending", dep=deps("pcl7"));
 
-AddTask("pcl9", "fix of matrix tests -- alignment and timing calibration", ass="Mateusz", cons="Jan", resp="DPG", stat="prepare", pr="",
-	flags="new-gm", dep=deps("pcl7"), comments="
-details in \ulink{https://github.com/cms-sw/cmssw/pull/35631}{here}
+AddTask("pcl9", "fix of matrix tests -- alignment and timing calibration", ass="Mateusz", cons="Jan", resp="DPG", stat="open", pr="35874",
+	flags="new-swm, new-gm", dep=deps("pcl7"), comments="
+details in \ulink{https://github.com/cms-sw/cmssw/issues/35764}{here}
 ");
 
 
