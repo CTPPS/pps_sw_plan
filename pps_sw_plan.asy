@@ -51,8 +51,9 @@ AddTask("re3", "update of N-F association cuts: class, DB infrastructure", ass="
 
 AddTask("re4", "update of N-F association cuts: DB upload", ass="Wagner", cons="Jan", resp="", stat="done", pr="", flags="new-gm", dep=deps("re3"));
 
-AddTask("re5", "update of N-F association cuts: use DB by default", ass="Jan", cons="", resp="", stat="open", pr="35766", flags="new-gm", dep=deps("re4"));
+AddTask("re5", "update of N-F association cuts: use DB by default", ass="Jan", cons="", resp="", stat="merged", pr="35766", flags="new-swm, new-gm", dep=deps("re4"));
 
+AddTask("re6", "N-F association cuts: bugfix for crash on DB read", ass="Jan", cons="", resp="", stat="open", pr="35941", flags="new-swm, new-gm", dep=deps("re4"));
 
 
 //----------------------------------------
@@ -99,7 +100,7 @@ AddTask("pcl7", "alignment -- PCL-like matrix workflow", ass="Mateusz", cons="Ja
 
 AddTask("pcl8", "alignment -- inclusion in central PCL", ass="AlCa", cons="", resp="DPG", stat="pending", dep=deps("pcl7"));
 
-AddTask("pcl9", "fix of matrix tests -- alignment and timing calibration", ass="Mateusz", cons="Jan", resp="DPG", stat="open", pr="35874",
+AddTask("pcl9", "fix of matrix tests -- alignment and timing calibration", ass="Mateusz", cons="Jan", resp="DPG", stat="merged", pr="35874",
 	flags="new-swm, new-gm", dep=deps("pcl7"), comments="
 details in \ulink{https://github.com/cms-sw/cmssw/issues/35764}{here}
 ");
