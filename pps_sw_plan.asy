@@ -32,6 +32,8 @@ AddTask("g20", "bug fix of Run2 pixel topology", ass="Fabrizio", cons="Jan", sta
 recovers low-x pixel acceptance in Run2 direct simu WFs
 ");
 
+AddTask("g21", "bug fix in data GTs for persistent geometry tags", ass="Helena", cons="", stat="merged", pr="35846", flags="new-swm, new-gm", comments="", dep=deps("g8", "g20"));
+
 
 
 //----------------------------------------
@@ -54,6 +56,8 @@ AddTask("re4", "update of N-F association cuts: DB upload", ass="Wagner", cons="
 AddTask("re5", "update of N-F association cuts: use DB by default", ass="Jan", cons="", resp="", stat="merged", pr="35766", flags="new-swm, new-gm", dep=deps("re4"));
 
 AddTask("re6", "N-F association cuts: bugfix for crash on DB read", ass="Jan", cons="", resp="", stat="open", pr="35941", flags="new-swm, new-gm", dep=deps("re4"));
+
+AddTask("re7", "N-F association cuts: update GTs for data and MC", ass="Helena", cons="", resp="", stat="merged", pr="35914", flags="new-swm, new-gm", dep=deps("re4"));
 
 
 //----------------------------------------
