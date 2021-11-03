@@ -32,7 +32,7 @@ AddTask("g20", "bug fix of Run2 pixel topology", ass="Fabrizio", cons="Jan", sta
 recovers low-x pixel acceptance in Run2 direct simu WFs
 ");
 
-AddTask("g21", "bug fix in data GTs for persistent geometry tags", ass="Helena", cons="", stat="merged", pr="35846", flags="new-swm, new-gm", comments="", dep=deps("g8", "g20"));
+AddTask("g21", "bug fix in data GTs for persistent geometry tags", ass="Helena", cons="", stat="merged", pr="35846", flags="new-swm, new-gm", comments="", dep=deps("g8"));
 
 
 
@@ -55,9 +55,9 @@ AddTask("re4", "update of N-F association cuts: DB upload", ass="Wagner", cons="
 
 AddTask("re5", "update of N-F association cuts: use DB by default", ass="Jan", cons="", resp="", stat="merged", pr="35766", flags="new-swm, new-gm", dep=deps("re4"));
 
-AddTask("re6", "N-F association cuts: bugfix for crash on DB read", ass="Jan", cons="", resp="", stat="open", pr="35941", flags="new-swm, new-gm", dep=deps("re4"));
-
 AddTask("re7", "N-F association cuts: update GTs for data and MC", ass="Helena", cons="", resp="", stat="merged", pr="35914", flags="new-swm, new-gm", dep=deps("re4"));
+
+AddTask("re6", "N-F association cuts: bugfix for crash on DB read", ass="Jan", cons="", resp="", stat="merged", pr="35941", flags="new-swm, new-gm", dep=deps("re7"));
 
 
 //----------------------------------------
@@ -104,10 +104,12 @@ AddTask("pcl7", "alignment -- PCL-like matrix workflow", ass="Mateusz", cons="Ja
 
 AddTask("pcl8", "alignment -- inclusion in central PCL", ass="AlCa", cons="", resp="DPG", stat="pending", dep=deps("pcl7"));
 
-AddTask("pcl9", "fix of matrix tests -- alignment and timing calibration", ass="Mateusz", cons="Jan", resp="DPG", stat="merged", pr="35874",
+AddTask("pcl9", "fix of alignment matrix test", ass="Mateusz", cons="Jan", resp="DPG", stat="merged", pr="35874",
 	flags="new-swm, new-gm", dep=deps("pcl7"), comments="
 details in \ulink{https://github.com/cms-sw/cmssw/issues/35764}{here}
 ");
+
+AddTask("pcl10", "fix of timing calibration matrix test", ass="Chris?", cons="", resp="DPG", stat="pending", pr="", flags="new-swm,new-gm");
 
 
 
