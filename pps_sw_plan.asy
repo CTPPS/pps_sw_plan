@@ -134,7 +134,9 @@ AddTask("fmw2", "UBSAN issue in CTPPSPixelDigiToRaw", ass="Fabrizio", stat="merg
 details in \ulink{https://github.com/cms-sw/cmssw/issues/35012#issuecomment-937741753}{here}
 ");
 
-
+AddTask("fmw3", "migration of PoolDBOutput service to *IOV methods", ass="Fabrizio", stat="pending", pr="", flags="new-swm, new-gm", comments="
+details in \ulink{https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuidePoolDBOutputService}{here}
+");
 
 //----------------------------------------
 //AddCategory("filters");
