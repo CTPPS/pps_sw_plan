@@ -34,7 +34,9 @@ recovers low-x pixel acceptance in Run2 direct simu WFs
 
 AddTask("g21", "bug fix in data GTs for persistent geometry tags", ass="Helena", cons="", stat="merged", pr="35846", flags="new-swm, new-gm", comments="", dep=deps("g8"));
 
+AddTask("g22", "corrected material for Timing Station", ass="Sunanda", cons="", stat="merged", pr="35961", flags="new-swm, new-gm", comments="");
 
+AddTask("g23", "update of cfi files to point to latest PPS geometry", ass="Gustavo", cons="", stat="merged", pr="35996", flags="new-swm, new-gm", comments="", dep=deps("g22"));
 
 //----------------------------------------
 //AddCategory("optimisations");
@@ -109,9 +111,7 @@ AddTask("pcl9", "fix of alignment matrix test", ass="Mateusz", cons="Jan", resp=
 details in \ulink{https://github.com/cms-sw/cmssw/issues/35764}{here}
 ");
 
-AddTask("pcl10", "fix of timing calibration matrix test", ass="Chris?", cons="", resp="DPG", stat="pending", pr="", flags="new-swm,new-gm");
-
-
+AddTask("pcl10", "fix of timing calibration matrix test", ass="Chris", cons="", resp="DPG", stat="pending", pr="35988", flags="new-swm,new-gm");
 
 //----------------------------------------
 AddCategory("nanoAOD");
