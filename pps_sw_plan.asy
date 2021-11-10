@@ -32,7 +32,7 @@ AddTask("g20", "bug fix of Run2 pixel topology", ass="Fabrizio", cons="Jan", sta
 recovers low-x pixel acceptance in Run2 direct simu WFs
 ");
 
-AddTask("g21", "bug fix in data GTs for persistent geometry tags", ass="Helena", cons="", stat="merged", pr="35846", flags="new-swm, new-gm", comments="", dep=deps("g8"));
+AddTask("g21", "bug fix in data GTs for persistent geometry tags", ass="Helena", cons="", stat="merged", pr="35846", flags="new-swm, new-gm", comments="", dep=deps("g18"));
 
 AddTask("g22", "corrected material for Timing Station", ass="Sunanda", cons="", stat="merged", pr="35961", flags="new-swm, new-gm", comments="");
 
