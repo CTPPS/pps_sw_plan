@@ -17,7 +17,7 @@ AddTask("g1", "final Run3 geometry update (XML)", ass="Fabrizio, Gustavo", stat=
 
 AddTask("g2", "fix: submit missing files", ass="Gustavo", stat="merged", pr="35399", flags="new-gm", dep=deps("g1"));
 
-AddTask("g8", "upload of geometry to DB (pre-processed)", ass="Wagner", cons="", resp="Fabrizio", stat="pending", dep=deps("g2"), comments="also GT update");
+AddTask("g8", "upload of geometry to DB (pre-processed)", ass="Wagner", cons="", resp="Fabrizio", stat="done", dep=deps("g2"), comments="also GT update");
 
 AddTask("g18", "default reco sequence uses pre-processed geometry", ass="Wagner, Helena", cons="Jan", resp="Fabrizio", stat="merged", pr="35772",
 	dep=deps(), flags="new-gm", comments="");
@@ -37,6 +37,8 @@ AddTask("g21", "bug fix in data GTs for persistent geometry tags", ass="Helena",
 AddTask("g22", "corrected material for Timing Station", ass="Sunanda", cons="", stat="merged", pr="35961", flags="new-swm, new-gm", comments="");
 
 AddTask("g23", "update of cfi files to point to latest PPS geometry", ass="Gustavo", cons="", stat="merged", pr="35996", flags="new-swm, new-gm", comments="", dep=deps("g22"));
+
+AddTask("g24", "upload of geometry to DB (DDD4HEP)", ass="Wagner", cons="", resp="Fabrizio", stat="open");
 
 //----------------------------------------
 //AddCategory("optimisations");
