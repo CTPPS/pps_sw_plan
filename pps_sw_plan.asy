@@ -111,7 +111,7 @@ AddTask("pcl9", "fix of alignment matrix test", ass="Mateusz", cons="Jan", resp=
 details in \ulink{https://github.com/cms-sw/cmssw/issues/35764}{here}
 ");
 
-AddTask("pcl10", "fix of timing calibration matrix test", ass="Chris", cons="", resp="DPG", stat="open", pr="35988", flags="new-swm,new-gm");
+AddTask("pcl10", "fix of timing calibration matrix test", ass="Chris", cons="", resp="DPG", stat="merged", pr="35988", flags="new-swm,new-gm");
 
 //----------------------------------------
 AddCategory("nanoAOD");
