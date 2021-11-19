@@ -38,7 +38,9 @@ AddTask("g22", "corrected material for Timing Station", ass="Sunanda", cons="", 
 
 AddTask("g23", "update of cfi files to point to latest PPS geometry", ass="Gustavo", cons="", stat="merged", pr="35996", flags="new-gm", comments="", dep=deps("g22"));
 
-AddTask("g24", "upload of geometry to DB (DDD4HEP)", ass="Wagner", cons="", resp="Fabrizio", stat="open");
+AddTask("g24", "upload of geometry to DB (DDD4HEP)", ass="Wagner", cons="", resp="Fabrizio", stat="open", flags="new-gm");
+
+AddTask("g25", "cleaning unused materials (DDD4HEP)", ass="Carl", cons="Gustavo", resp="Fabrizio", stat="open", pr="36163", flags="new-swm, new-gm");
 
 //----------------------------------------
 //AddCategory("optimisations");
