@@ -89,7 +89,7 @@ AddTask("dqm6", "timing RPs -- extract harvesting code to harverster modules", a
 and add per-LS plots
 ");
 
-AddTask("dqm9", "include PPS to T0 processing", ass="Fabrizio", resp="DPG", stat="open", pr="https://github.com/dmwm/T0/pull/4588", flags="", comments="");
+AddTask("dqm9", "include PPS to T0 processing", ass="Fabrizio", resp="DPG", stat="open", pr="https://github.com/dmwm/T0/pull/4588", flags="", comments="", dep=deps("pcl11"));
 
 AddTask("dqm12", "use Run3 era in online DQM, fix in master", ass="Jan", stat="merged", pr="35550", flags="new-gm");
 
@@ -116,6 +116,9 @@ details in \ulink{https://github.com/cms-sw/cmssw/issues/35764}{here}
 ");
 
 AddTask("pcl10", "fix of timing calibration matrix test", ass="Chris", cons="", resp="DPG", stat="merged", pr="35988", flags="new-gm");
+
+AddTask("pcl11", "AlCaReco producer for PPS calibrations", ass="Andrea", cons="Leszek", resp="", stat="open", pr="", flags="new-swm, new-gm");
+
 
 //----------------------------------------
 AddCategory("nanoAOD");
