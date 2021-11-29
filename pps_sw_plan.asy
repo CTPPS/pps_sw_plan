@@ -117,7 +117,9 @@ details in \ulink{https://github.com/cms-sw/cmssw/issues/35764}{here}
 
 AddTask("pcl10", "fix of timing calibration matrix test", ass="Chris", cons="", resp="DPG", stat="merged", pr="35988", flags="new-gm");
 
-AddTask("pcl11", "AlCaReco producer for PPS calibrations", ass="Andrea", cons="Leszek", resp="", stat="open", pr="", flags="new-swm, new-gm");
+AddTask("pcl11", "AlCaReco producer for PPS calibrations", ass="Andrea", cons="Leszek", resp="", stat="open", pr="36273", flags="new-swm, new-gm");
+
+AddTask("pcl12", "alignment -- reformatting, readme", ass="Mateusz", cons="", resp="", stat="open", pr="36257", flags="new-swm, new-gm", dep=deps("pcl7"));
 
 
 //----------------------------------------
