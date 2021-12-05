@@ -40,7 +40,7 @@ AddTask("g23", "update of cfi files to point to latest PPS geometry", ass="Gusta
 
 AddTask("g24", "upload of geometry to DB (DDD4HEP)", ass="Wagner", cons="", resp="Fabrizio", stat="open", flags="new-gm");
 
-AddTask("g25", "cleaning unused materials (DDD4HEP)", ass="Carl", cons="Gustavo", resp="Fabrizio", stat="open", pr="36163", flags="new-swm, new-gm");
+AddTask("g25", "cleaning unused materials (DDD4HEP)", ass="Carl", cons="Gustavo", resp="Fabrizio", stat="merged", pr="36307", flags="new-swm, new-gm");
 
 //----------------------------------------
 //AddCategory("optimisations");
