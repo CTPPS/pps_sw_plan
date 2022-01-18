@@ -65,6 +65,10 @@ AddTask("re7", "N-F association cuts: update GTs for data and MC", ass="Helena",
 
 AddTask("re6", "N-F association cuts: bugfix for crash on DB read", ass="Jan", cons="", resp="", stat="merged", pr="35941", flags="new-gm", dep=deps("re7"));
 
+AddTask("re8", "Calibration Record for HPTDC nonlinearities compensation", ass="Chris", cons="", resp="", stat="merged", pr="36537", flags="new-swm");
+
+AddTask("re9", "HPTDC nonlinearities compensation", ass="Chris", cons="", resp="", stat="open", pr="36713", flags="new-swm", dep=deps("re8"));
+
 
 //----------------------------------------
 AddCategory("direct simulation");
@@ -89,7 +93,7 @@ AddTask("dqm6", "timing RPs -- extract harvesting code to harverster modules", a
 and add per-LS plots
 ");
 
-AddTask("dqm9", "include PPS to T0 processing", ass="Fabrizio", resp="DPG", stat="open", pr="https://github.com/dmwm/T0/pull/4588", flags="", comments="", dep=deps("pcl11"));
+AddTask("dqm9", "include PPS to T0 processing", ass="Fabrizio", resp="DPG", stat="open", pr="https://github.com/dmwm/T0/pull/4588", flags="", comments="", dep=deps("pcl13","pcl17"));
 
 AddTask("dqm12", "use Run3 era in online DQM, fix in master", ass="Jan", stat="merged", pr="35550", flags="new-gm");
 
@@ -117,15 +121,25 @@ details in \ulink{https://github.com/cms-sw/cmssw/issues/35764}{here}
 
 AddTask("pcl10", "fix of timing calibration matrix test", ass="Chris", cons="", resp="DPG", stat="merged", pr="35988", flags="new-gm");
 
-AddTask("pcl11", "AlCaReco producer for PPS calibrations", ass="Andrea", cons="Leszek", resp="", stat="open", pr="36273", flags="new-swm, new-gm");
+AddTask("pcl11", "AlCaReco producer for PPS calibrations", ass="Andrea", cons="Leszek", resp="AlCa", stat="open", pr="36273", flags="new-swm, new-gm");
 
-AddTask("pcl12", "alignment -- reformatting, readme", ass="Mateusz", cons="", resp="", stat="merged", pr="36257", flags="new-swm, new-gm", dep=deps("pcl7"));
+AddTask("pcl12", "alignment -- reformatting, readme", ass="Mateusz", cons="", resp="", stat="merged", pr="36257", flags="new-swm, new-gm");
+
+AddTask("pcl13", "renaming of AlCa reco producers for Tier0 replay", ass="Leszek", cons="AlCa", resp="AlCa", stat="open", flags="new-swm, new-gm", dep=deps("pcl11","pcl14","pcl15","pcl16"));
+
+AddTask("pcl14", "AlCa reco general alignment -- renaming", ass="Mateusz,Leszek", cons="Leszek", resp="AlCa", stat="open", pr="36698", flags="new-swm, new-gm");
+
+AddTask("pcl15", "AlCa reco HPTDC calibration -- renaming", ass="Mateusz,Leszek", cons="Leszek", resp="AlCa", stat="open", pr="36702", flags="new-swm, new-gm");
+
+AddTask("pcl16", "AlCa reco SAMPIC calibration -- renaming", ass="Chris", cons="Leszek", resp="AlCa", stat="open", pr="36707", flags="new-swm, new-gm");
+
+AddTask("pcl17", "PPSCalTrack AlCa reco added to autoAlCa", ass="Leszek", cons="Leszek", resp="AlCa", stat="open", pr="36730", flags="new-swm, new-gm");
 
 
 //----------------------------------------
 AddCategory("nanoAOD");
 
-AddTask("na2", "simu tracks and protons in nanoAOD", ass="", cons="", resp="POG", stat="pending", dep=deps(), comments="
+AddTask("na2", "simu tracks and protons in nanoAOD", ass="Laurent", cons="", resp="POG", stat="open", flags="new-swm", pr="36080", dep=deps(), comments="
 idea: run ``direct'' simu during nanoAOD production\\
 by default, this would be disabled, but available for private use
 ");
