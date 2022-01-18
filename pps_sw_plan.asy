@@ -119,7 +119,7 @@ AddTask("pcl10", "fix of timing calibration matrix test", ass="Chris", cons="", 
 
 AddTask("pcl11", "AlCaReco producer for PPS calibrations", ass="Andrea", cons="Leszek", resp="", stat="open", pr="36273", flags="new-swm, new-gm");
 
-AddTask("pcl12", "alignment -- reformatting, readme", ass="Mateusz", cons="", resp="", stat="open", pr="36257", flags="new-swm, new-gm", dep=deps("pcl7"));
+AddTask("pcl12", "alignment -- reformatting, readme", ass="Mateusz", cons="", resp="", stat="merged", pr="36257", flags="new-swm, new-gm", dep=deps("pcl7"));
 
 
 //----------------------------------------
@@ -143,7 +143,7 @@ AddTask("fmw2", "UBSAN issue in CTPPSPixelDigiToRaw", ass="Fabrizio", stat="merg
 details in \ulink{https://github.com/cms-sw/cmssw/issues/35012#issuecomment-937741753}{here}
 ");
 
-AddTask("fmw3", "migration of PoolDBOutput service to *IOV methods", ass="Fabrizio", stat="open", pr="36180", flags="new-swm, new-gm", comments="
+AddTask("fmw3", "migration of PoolDBOutput service to *IOV methods", ass="Fabrizio", stat="merged", pr="36180", flags="new-swm, new-gm", comments="
 draft PR under review, mem leak details in \ulink{https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuidePoolDBOutputService}{here}
 ");
 
