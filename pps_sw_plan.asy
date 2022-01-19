@@ -40,7 +40,7 @@ AddTask("g23", "update of cfi files to point to latest PPS geometry", ass="Gusta
 
 AddTask("g24", "upload of geometry to DB (DDD4HEP)", ass="Wagner", cons="", resp="Fabrizio", stat="open", flags="new-gm");
 
-AddTask("g25", "cleaning unused materials (DDD4HEP)", ass="Carl", cons="Gustavo", resp="Fabrizio", stat="merged", pr="36307", flags="new-swm, new-gm");
+AddTask("g25", "cleaning unused materials (DDD4HEP)", ass="Carl", cons="Gustavo", resp="Fabrizio", stat="merged", pr="36307", flags="new-gm");
 
 //----------------------------------------
 //AddCategory("optimisations");
@@ -65,9 +65,9 @@ AddTask("re7", "N-F association cuts: update GTs for data and MC", ass="Helena",
 
 AddTask("re6", "N-F association cuts: bugfix for crash on DB read", ass="Jan", cons="", resp="", stat="merged", pr="35941", flags="new-gm", dep=deps("re7"));
 
-AddTask("re8", "Calibration Record for HPTDC nonlinearities compensation", ass="Chris", cons="", resp="", stat="merged", pr="36537", flags="new-swm");
+AddTask("re8", "Calibration Record for HPTDC nonlinearities compensation", ass="Chris", cons="", resp="", stat="merged", pr="36537", flags="new-gm");
 
-AddTask("re9", "HPTDC nonlinearities compensation", ass="Chris", cons="", resp="", stat="open", pr="36713", flags="new-swm", dep=deps("re8"));
+AddTask("re9", "HPTDC nonlinearities compensation", ass="Chris", cons="", resp="", stat="open", pr="36713", flags="new-swm, new-gm", dep=deps("re8"));
 
 
 //----------------------------------------
@@ -123,7 +123,7 @@ AddTask("pcl10", "fix of timing calibration matrix test", ass="Chris", cons="", 
 
 AddTask("pcl11", "AlCaReco producer for PPS calibrations", ass="Andrea", cons="Leszek", resp="AlCa", stat="open", pr="36273", flags="new-swm, new-gm");
 
-AddTask("pcl12", "alignment -- reformatting, readme", ass="Mateusz", cons="", resp="", stat="merged", pr="36257", flags="new-swm, new-gm");
+AddTask("pcl12", "alignment -- reformatting, readme", ass="Mateusz", cons="", resp="", stat="merged", pr="36257", flags="new-gm");
 
 AddTask("pcl13", "renaming of AlCa reco producers for Tier0 replay", ass="Leszek", cons="AlCa", resp="AlCa", stat="open", flags="new-swm, new-gm", dep=deps("pcl11","pcl14","pcl15","pcl16"));
 
@@ -157,7 +157,7 @@ AddTask("fmw2", "UBSAN issue in CTPPSPixelDigiToRaw", ass="Fabrizio", stat="merg
 details in \ulink{https://github.com/cms-sw/cmssw/issues/35012#issuecomment-937741753}{here}
 ");
 
-AddTask("fmw3", "migration of PoolDBOutput service to *IOV methods", ass="Fabrizio", stat="merged", pr="36180", flags="new-swm, new-gm", comments="
+AddTask("fmw3", "migration of PoolDBOutput service to *IOV methods", ass="Fabrizio", stat="merged", pr="36180", flags="new-gm", comments="
 draft PR under review, mem leak details in \ulink{https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuidePoolDBOutputService}{here}
 ");
 
