@@ -67,7 +67,7 @@ AddTask("re6", "N-F association cuts: bugfix for crash on DB read", ass="Jan", c
 
 AddTask("re8", "Calibration Record for HPTDC nonlinearities compensation", ass="Chris", cons="", resp="", stat="merged", pr="36537", flags="new-gm");
 
-AddTask("re9", "HPTDC nonlinearities compensation", ass="Chris", cons="", resp="", stat="open", pr="36713", flags="new-swm, new-gm", dep=deps("re8"));
+AddTask("re9", "HPTDC nonlinearities compensation", ass="Chris", cons="", resp="", stat="merged", pr="36713", flags="new-swm, new-gm", dep=deps("re8"));
 
 
 //----------------------------------------
@@ -93,7 +93,7 @@ AddTask("dqm6", "timing RPs -- extract harvesting code to harverster modules", a
 and add per-LS plots
 ");
 
-AddTask("dqm9", "include PPS to T0 processing", ass="Fabrizio", resp="DPG", stat="open", pr="https://github.com/dmwm/T0/pull/4588", flags="", comments="", dep=deps("pcl13","pcl17"));
+AddTask("dqm9", "include PPS to T0 processing", ass="Fabrizio", resp="DPG", stat="open", pr="https://github.com/dmwm/T0/pull/4588", flags="", comments="", dep=deps("pcl13"));
 
 AddTask("dqm12", "use Run3 era in online DQM, fix in master", ass="Jan", stat="merged", pr="35550", flags="new-gm");
 
@@ -125,15 +125,7 @@ AddTask("pcl11", "AlCaReco producer for PPS calibrations", ass="Andrea", cons="L
 
 AddTask("pcl12", "alignment -- reformatting, readme", ass="Mateusz", cons="", resp="", stat="merged", pr="36257", flags="new-gm");
 
-AddTask("pcl13", "renaming of AlCa reco producers for Tier0 replay", ass="Leszek", cons="AlCa", resp="AlCa", stat="open", flags="new-swm, new-gm", dep=deps("pcl11","pcl14","pcl15","pcl16"));
-
-AddTask("pcl14", "AlCa reco general alignment -- renaming", ass="Mateusz,Leszek", cons="Leszek", resp="AlCa", stat="open", pr="36698", flags="new-swm, new-gm");
-
-AddTask("pcl15", "AlCa reco HPTDC calibration -- renaming", ass="Mateusz,Leszek", cons="Leszek", resp="AlCa", stat="open", pr="36702", flags="new-swm, new-gm");
-
-AddTask("pcl16", "AlCa reco SAMPIC calibration -- renaming", ass="Chris", cons="Leszek", resp="AlCa", stat="open", pr="36707", flags="new-swm, new-gm");
-
-AddTask("pcl17", "PPSCalTrack AlCa reco added to autoAlCa", ass="Leszek", cons="Leszek", resp="AlCa", stat="open", pr="36730", flags="new-swm, new-gm");
+AddTask("pcl13", "renaming of AlCa reco producers for Tier0 replay", ass="Leszek", cons="AlCa", resp="AlCa", pr="36702", stat="merged", flags="new-swm, new-gm");
 
 
 //----------------------------------------
