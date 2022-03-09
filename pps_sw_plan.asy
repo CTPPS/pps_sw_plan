@@ -69,7 +69,7 @@ AddTask("re8", "Calibration Record for HPTDC nonlinearities compensation", ass="
 
 AddTask("re9", "HPTDC nonlinearities compensation", ass="Chris", cons="", resp="", stat="merged", pr="36713", flags="new-swm, new-gm", dep=deps("re8"));
 
-AddTask("re10", "XML and FedId configuration update", ass="Chris", cons="", resp="", stat="open", pr="37147", flags="new-swm, new-gm");
+AddTask("re10", "XML and FedId configuration update", ass="Chris", cons="", resp="", stat="merged", pr="37147", flags="new-swm, new-gm");
 
 AddTask("re11", "removing temporary GT access from diamond Reco", ass="Helena", cons="AlCa", resp="", stat="merged", pr="37034", flags="new-swm, new-gm");
 
