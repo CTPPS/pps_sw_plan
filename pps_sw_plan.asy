@@ -38,7 +38,7 @@ AddTask("g22", "corrected material for Timing Station", ass="Sunanda", cons="", 
 
 AddTask("g23", "update of cfi files to point to latest PPS geometry", ass="Gustavo", cons="", stat="merged", pr="35996", flags="new-gm", comments="", dep=deps("g22"));
 
-AddTask("g24", "upload of geometry to DB (DDD4HEP)", ass="Wagner", cons="", resp="Fabrizio", stat="open", flags="new-gm");
+AddTask("g24", "upload of geometry to DB (DDD4HEP)", ass="Wagner", cons="", resp="Fabrizio", stat="merged", flags="new-gm");
 
 AddTask("g25", "cleaning unused materials (DDD4HEP)", ass="Carl", cons="Gustavo", resp="Fabrizio", stat="merged", pr="36307", flags="new-gm");
 
@@ -121,7 +121,7 @@ details in \ulink{https://github.com/cms-sw/cmssw/issues/35764}{here}
 
 AddTask("pcl10", "fix of timing calibration matrix test", ass="Chris", cons="", resp="DPG", stat="merged", pr="35988", flags="new-gm");
 
-AddTask("pcl11", "AlCaReco producer for PPS calibrations", ass="Andrea", cons="Leszek", resp="AlCa", stat="open", pr="36273", flags="new-swm, new-gm");
+AddTask("pcl11", "AlCaReco producer for PPS calibrations", ass="Andrea", cons="Leszek", resp="AlCa", stat="merged", pr="36273", flags="new-swm, new-gm");
 
 AddTask("pcl12", "alignment -- reformatting, readme", ass="Mateusz", cons="", resp="", stat="merged", pr="36257", flags="new-gm");
 
@@ -131,7 +131,7 @@ AddTask("pcl13", "renaming of AlCa reco producers for Tier0 replay", ass="Leszek
 //----------------------------------------
 AddCategory("nanoAOD");
 
-AddTask("na2", "simu tracks and protons in nanoAOD", ass="Laurent", cons="", resp="POG", stat="open", flags="new-swm", pr="36080", dep=deps(), comments="
+AddTask("na2", "simu tracks and protons in nanoAOD", ass="Laurent", cons="", resp="POG", stat="merged", flags="new-swm", pr="36080", dep=deps(), comments="
 idea: run ``direct'' simu during nanoAOD production\\
 by default, this would be disabled, but available for private use
 ");
