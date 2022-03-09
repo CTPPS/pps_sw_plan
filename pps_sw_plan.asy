@@ -1,9 +1,9 @@
 import code;
 
 //----------------------------------------
-//AddCategory("data formats");
+AddCategory("data formats");
 
-
+AddTask("df1", "LHCInfo workflow for Run3 - beta* and xangle updated", ass="Giacomo", cons="AlCa", stat="merged", pr="37098", flags="new-swm, new-gm");
 
 //----------------------------------------
 //AddCategory("config");
@@ -69,13 +69,16 @@ AddTask("re8", "Calibration Record for HPTDC nonlinearities compensation", ass="
 
 AddTask("re9", "HPTDC nonlinearities compensation", ass="Chris", cons="", resp="", stat="merged", pr="36713", flags="new-swm, new-gm", dep=deps("re8"));
 
+AddTask("re10", "XML and FedId configuration update", ass="Chris", cons="", resp="", stat="open", pr="37147", flags="new-swm, new-gm");
 
-//----------------------------------------
-AddCategory("direct simulation");
+AddTask("re11", "removing temporary GT access from diamond Reco", ass="Helena", cons="AlCa", resp="", stat="merged", pr="37034", flags="new-swm, new-gm");
 
-AddTask("ds1", "adjust Run3 alignment", pri="", ass="Jan", stat="merged", pr="35424", dep=deps("g2"), flags="new-gm");
+// //----------------------------------------
+// AddCategory("direct simulation");
 
-AddTask("ds4", "backport to CMSSW 10\_6", pri="", ass="", stat="pending", resp="POG", due="", dep=deps(), comments="backport of features only available in 11\_X/12\_X to the release used for Run2 analyses");
+// AddTask("ds1", "adjust Run3 alignment", pri="", ass="Jan", stat="merged", pr="35424", dep=deps("g2"), flags="new-gm");
+
+// AddTask("ds4", "backport to CMSSW 10\_6", pri="", ass="", stat="pending", resp="POG", due="", dep=deps(), comments="backport of features only available in 11\_X/12\_X to the release used for Run2 analyses");
 
 
 
@@ -103,6 +106,8 @@ AddTask("val1", "more validation plots", ass="Jan", stat="merged", pr="35740", f
 
 AddTask("val2", "dLyds perturbation scenario for modified optics", ass="Frizi", stat="merged", pr="36039", flags="new-gm", comments="implemented in modified optics ES generator");
 
+AddTask("val3", "fox to dLyds perturbation scenario (optics)", ass="Frizi", stat="merged", pr="36873", flags="new-swm, new-gm", dep=deps("val2"));
+
 //----------------------------------------
 AddCategory("PCLs");
 
@@ -127,6 +132,7 @@ AddTask("pcl12", "alignment -- reformatting, readme", ass="Mateusz", cons="", re
 
 AddTask("pcl13", "renaming of AlCa reco producers for Tier0 replay", ass="Leszek", cons="AlCa", resp="AlCa", pr="36702", stat="merged", flags="new-swm, new-gm");
 
+AddTask("pcl14", "new AlCa reco producer support in PCL workers", ass="Mateusz", cons="AlCa", resp="AlCa", pr="37050", stat="merged", flags="new-swm, new-gm", dep=deps("pcl11"));
 
 //----------------------------------------
 AddCategory("nanoAOD");
@@ -153,19 +159,24 @@ AddTask("fmw3", "migration of PoolDBOutput service to *IOV methods", ass="Fabriz
 draft PR under review, mem leak details in \ulink{https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuidePoolDBOutputService}{here}
 ");
 
+AddTask("fmw4", "Cleaning EDModules implementation", ass="Fabrizio", stat="merged", pr="36960", flags="new-swm, new-gm");
+
+
 //----------------------------------------
 //AddCategory("filters");
 
 
 
 //----------------------------------------
-AddCategory("other");
+// AddCategory("other");
 
-AddTask("ot1", "standardised code for simu + PU event merging", ass="Andrea?", resp="POG", stat="pending", dep=deps(), comments="
-code for standard PPS procedure of mixing (rec-hit level) simu signal with PU from unrelated real LHC events
-");
+// AddTask("ot1", "standardised code for simu + PU event merging", ass="Andrea?", resp="POG", stat="pending", dep=deps(), comments="
+// code for standard PPS procedure of mixing (rec-hit level) simu signal with PU from unrelated real LHC events
+// ");
 
 
 
 //----------------------------------------
 MakePlot(330, "new-swm");
+
+// TODO https://github.com/cms-sw/cmssw/pull/36780
