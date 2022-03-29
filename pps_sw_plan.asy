@@ -3,7 +3,7 @@ import code;
 //----------------------------------------
 AddCategory("data formats");
 
-AddTask("df1", "LHCInfo workflow for Run3 - beta* and xangle updated", ass="Giacomo", cons="AlCa", stat="merged", pr="37098", flags="new-swm, new-gm");
+AddTask("df1", "LHCInfo workflow for Run3 - beta* and xangle updated", ass="Giacomo", cons="AlCa", stat="merged", pr="37098", flags="new-gm");
 
 //----------------------------------------
 //AddCategory("config");
@@ -67,11 +67,11 @@ AddTask("re6", "N-F association cuts: bugfix for crash on DB read", ass="Jan", c
 
 AddTask("re8", "Calibration Record for HPTDC nonlinearities compensation", ass="Chris", cons="", resp="", stat="merged", pr="36537", flags="new-gm");
 
-AddTask("re9", "HPTDC nonlinearities compensation", ass="Chris", cons="", resp="", stat="merged", pr="36713", flags="new-swm, new-gm", dep=deps("re8"));
+AddTask("re9", "HPTDC nonlinearities compensation", ass="Chris", cons="", resp="", stat="merged", pr="36713", flags="new-gm", dep=deps("re8"));
 
-AddTask("re10", "XML and FedId configuration update", ass="Chris", cons="", resp="", stat="merged", pr="37147", flags="new-swm, new-gm");
+AddTask("re10", "XML and FedId configuration update", ass="Chris", cons="", resp="", stat="merged", pr="37147", flags="new-gm");
 
-AddTask("re11", "removing temporary GT access from diamond Reco", ass="Helena", cons="AlCa", resp="", stat="merged", pr="37034", flags="new-swm, new-gm");
+AddTask("re11", "removing temporary GT access from diamond Reco", ass="Helena", cons="AlCa", resp="", stat="merged", pr="37034", flags="new-gm");
 
 // //----------------------------------------
 // AddCategory("direct simulation");
@@ -106,7 +106,7 @@ AddTask("val1", "more validation plots", ass="Jan", stat="merged", pr="35740", f
 
 AddTask("val2", "dLyds perturbation scenario for modified optics", ass="Frizi", stat="merged", pr="36039", flags="new-gm", comments="implemented in modified optics ES generator");
 
-AddTask("val3", "fox to dLyds perturbation scenario (optics)", ass="Frizi", stat="merged", pr="36873", flags="new-swm, new-gm", dep=deps("val2"));
+AddTask("val3", "fix to dLyds perturbation scenario (optics)", ass="Frizi", stat="merged", pr="36873", flags="new-gm", dep=deps("val2"));
 
 //----------------------------------------
 AddCategory("PCLs");
@@ -126,18 +126,18 @@ details in \ulink{https://github.com/cms-sw/cmssw/issues/35764}{here}
 
 AddTask("pcl10", "fix of timing calibration matrix test", ass="Chris", cons="", resp="DPG", stat="merged", pr="35988", flags="new-gm");
 
-AddTask("pcl11", "AlCaReco producer for PPS calibrations", ass="Andrea", cons="Leszek", resp="AlCa", stat="merged", pr="36273", flags="new-swm, new-gm");
+AddTask("pcl11", "AlCaReco producer for PPS calibrations", ass="Andrea", cons="Leszek", resp="AlCa", stat="merged", pr="36273", flags="new-gm");
 
 AddTask("pcl12", "alignment -- reformatting, readme", ass="Mateusz", cons="", resp="", stat="merged", pr="36257", flags="new-gm");
 
-AddTask("pcl13", "renaming of AlCa reco producers for Tier0 replay", ass="Leszek", cons="AlCa", resp="AlCa", pr="36702", stat="merged", flags="new-swm, new-gm");
+AddTask("pcl13", "renaming of AlCa reco producers for Tier0 replay", ass="Leszek", cons="AlCa", resp="AlCa", pr="36702", stat="merged", flags="new-gm");
 
-AddTask("pcl14", "new AlCa reco producer support in PCL workers", ass="Mateusz", cons="AlCa", resp="AlCa", pr="37050", stat="merged", flags="new-swm, new-gm", dep=deps("pcl11"));
+AddTask("pcl14", "new AlCa reco producer support in PCL workers", ass="Mateusz", cons="AlCa", resp="AlCa", pr="37050", stat="merged", flags="new-gm", dep=deps("pcl11"));
 
 //----------------------------------------
 AddCategory("nanoAOD");
 
-AddTask("na2", "simu tracks and protons in nanoAOD", ass="Laurent", cons="", resp="POG", stat="merged", flags="new-swm", pr="36080", dep=deps(), comments="
+AddTask("na2", "simu tracks and protons in nanoAOD", ass="Laurent", cons="", resp="POG", stat="merged", flags="new-gm", pr="36080", dep=deps(), comments="
 idea: run ``direct'' simu during nanoAOD production\\
 by default, this would be disabled, but available for private use
 ");
@@ -159,7 +159,7 @@ AddTask("fmw3", "migration of PoolDBOutput service to *IOV methods", ass="Fabriz
 draft PR under review, mem leak details in \ulink{https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuidePoolDBOutputService}{here}
 ");
 
-AddTask("fmw4", "Cleaning EDModules implementation", ass="Fabrizio", stat="merged", pr="36960", flags="new-swm, new-gm");
+AddTask("fmw4", "Cleaning EDModules implementation", ass="Fabrizio", stat="merged", pr="36960", flags="new-gm");
 
 
 //----------------------------------------
