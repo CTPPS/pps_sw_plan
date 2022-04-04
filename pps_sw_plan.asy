@@ -73,6 +73,9 @@ AddTask("re10", "XML and FedId configuration update", ass="Chris", cons="", resp
 
 AddTask("re11", "removing temporary GT access from diamond Reco", ass="Helena", cons="AlCa", resp="", stat="merged", pr="37034", flags="new-gm");
 
+AddTask("re12", "XML configuration hotfix", ass="Chris", cons="", resp="", stat="merged", pr="37449", flags="new-swm, new-gm");
+
+
 // //----------------------------------------
 // AddCategory("direct simulation");
 
