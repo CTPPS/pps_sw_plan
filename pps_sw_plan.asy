@@ -75,6 +75,12 @@ AddTask("re11", "removing temporary GT access from diamond Reco", ass="Helena", 
 
 AddTask("re12", "XML configuration hotfix", ass="Chris", cons="", resp="", stat="merged", pr="37449", flags="new-gm");
 
+AddTask("re13", "XML configuration hotfix (backport to 12\_3)", ass="Chris", cons="", resp="", stat="merged", pr="37450", flags="new-gm", dep=deps("re12"));
+
+AddTask("re14", "XML (strips mapping) corrupted comment line fix", ass="Leszek", cons="", resp="", stat="merged", pr="37498", flags="new-gm", dep=deps("re12"));
+
+AddTask("re15", "XML (strips mapping) corrupted comment line fix (backport to 12\_3)", ass="Leszek", cons="", resp="", stat="merged", pr="37499", flags="new-gm", dep=deps("re14"));
+
 
 // //----------------------------------------
 AddCategory("direct simulation");
