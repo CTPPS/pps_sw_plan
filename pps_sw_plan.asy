@@ -81,13 +81,13 @@ AddTask("re14", "XML (strips mapping) corrupted comment line fix", ass="Leszek",
 
 AddTask("re15", "XML (strips mapping) corrupted comment line fix (backport to 12\_3)", ass="Leszek", cons="", resp="", stat="merged", pr="37499", flags="new-gm", dep=deps("re14"));
 
-AddTask("re16", "XML mapping for pixels", ass="Wagner", cons="", resp="", stat="merged", pr="38150", flags="new-gm, new-swm");
+AddTask("re16", "XML mapping for pixels", ass="Wagner", cons="", resp="", stat="merged", pr="38150", flags="new-gm,new-swm");
 
-AddTask("re17", "Fix for hardcoded subdetector id", ass="Chris", cons="", resp="", stat="merged", pr="38208", flags="new-gm, new-swm");
+AddTask("re17", "Fix for hardcoded subdetector id", ass="Chris", cons="", resp="", stat="merged", pr="38208", flags="new-gm,new-swm");
 
-AddTask("re18", "Fix for hardcoded subdetector id (backport to 12\_3)", ass="Chris", cons="", resp="", stat="open", pr="38232", flags="new-gm, new-swm", dep=deps("re17"));
+AddTask("re18", "Fix for hardcoded subdetector id (backport to 12\_3)", ass="Chris", cons="", resp="", stat="open", pr="38232", flags="new-gm,new-swm", dep=deps("re17"));
 
-AddTask("re19", "Fix for hardcoded subdetector id (backport to 12\_4)", ass="Chris", cons="", resp="", stat="open", pr="38231", flags="new-gm, new-swm", dep=deps("re17"));
+AddTask("re19", "Fix for hardcoded subdetector id (backport to 12\_4)", ass="Chris", cons="", resp="", stat="open", pr="38231", flags="new-gm,new-swm", dep=deps("re17"));
 
 // //----------------------------------------
 AddCategory("direct simulation");
@@ -151,11 +151,11 @@ AddTask("pcl13", "renaming of AlCa reco producers for Tier0 replay", ass="Leszek
 
 AddTask("pcl14", "new AlCa reco producer support in PCL workers", ass="Mateusz", cons="AlCa", resp="AlCa", pr="37050", stat="merged", flags="new-gm", dep=deps("pcl11"));
 
-AddTask("pcl15", "shorten name of calibration producer", ass="Francesco Brivio", cons="AlCa", resp="AlCa", pr="38209", stat="merged", flags="new-gm, new-swm");
+AddTask("pcl15", "shorten name of calibration producer", ass="Francesco Brivio", cons="AlCa", resp="AlCa", pr="38209", stat="merged", flags="new-gm,new-swm");
 
-AddTask("pcl16", "shorten name of calibration producer, backport to 12\_3", ass="Francesco Brivio", cons="AlCa", resp="AlCa", pr="38221", stat="merged", flags="new-gm, new-swm", dep=deps("pcl15"));
+AddTask("pcl16", "shorten name of calibration producer, backport to 12\_3", ass="Francesco Brivio", cons="AlCa", resp="AlCa", pr="38221", stat="merged", flags="new-gm,new-swm", dep=deps("pcl15"));
 
-AddTask("pcl17", "shorten name of calibration producer, backport to 12\_4", ass="Francesco Brivio", cons="AlCa", resp="AlCa", pr="38220", stat="merged", flags="new-gm, new-swm", dep=deps("pcl15"));
+AddTask("pcl17", "shorten name of calibration producer, backport to 12\_4", ass="Francesco Brivio", cons="AlCa", resp="AlCa", pr="38220", stat="merged", flags="new-gm,new-swm", dep=deps("pcl15"));
 
 //----------------------------------------
 //AddCategory("nanoAOD");
