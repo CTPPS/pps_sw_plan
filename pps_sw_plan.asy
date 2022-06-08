@@ -26,11 +26,11 @@ AddTask("g10", "remove geometry specs from reco cff files", ass="", stat="pendin
 
 AddTask("g11", "organise files in Geometry/VeryForwardData/data", ass="a newcomer", cons="Clemencia", resp="Fabrizio", stat="pending", dep=deps());
 
-AddTask("g19", "disable building of misaligned geometry by default", ass="Jan", stat="merged", pr="35423", flags="new-gm", comments="misaligned geometry causes problems in PPS HLT\\ sequence (probably due to missing conditions in DB)");
+//AddTask("g19", "disable building of misaligned geometry by default", ass="Jan", stat="merged", pr="35423", flags="new-gm", comments="misaligned geometry causes problems in PPS HLT\\ sequence (probably due to missing conditions in DB)");
 
-AddTask("g20", "bug fix of Run2 pixel topology", ass="Fabrizio", cons="Jan", stat="merged", pr="35671", flags="new-gm", comments="
-recovers low-x pixel acceptance in Run2 direct simu WFs
-");
+//AddTask("g20", "bug fix of Run2 pixel topology", ass="Fabrizio", cons="Jan", stat="merged", pr="35671", flags="new-gm", comments="
+//recovers low-x pixel acceptance in Run2 direct simu WFs
+//");
 
 AddTask("g21", "bug fix in data GTs for persistent geometry tags", ass="Helena", cons="", stat="merged", pr="35846", flags="new-gm", comments="", dep=deps("g18"));
 
@@ -59,7 +59,7 @@ AddTask("re3", "update of N-F association cuts: class, DB infrastructure", ass="
 
 AddTask("re4", "update of N-F association cuts: DB upload", ass="Wagner", cons="Jan", resp="", stat="done", pr="", flags="new-gm", dep=deps("re3"));
 
-AddTask("re5", "update of N-F association cuts: use DB by default", ass="Jan", cons="", resp="", stat="merged", pr="35766", flags="new-gm", dep=deps("re4"));
+//AddTask("re5", "update of N-F association cuts: use DB by default", ass="Jan", cons="", resp="", stat="merged", pr="35766", flags="new-gm", dep=deps("re4"));
 
 AddTask("re7", "N-F association cuts: update GTs for data and MC", ass="Helena", cons="", resp="", stat="merged", pr="35914", flags="new-gm", dep=deps("re4"));
 
@@ -73,16 +73,17 @@ AddTask("re10", "XML and FedId configuration update", ass="Chris", cons="", resp
 
 AddTask("re11", "removing temporary GT access from diamond Reco", ass="Helena", cons="AlCa", resp="", stat="merged", pr="37034", flags="new-gm");
 
-AddTask("re12", "XML configuration hotfix", ass="Chris", cons="", resp="", stat="merged", pr="37449", flags="new-swm, new-gm");
+AddTask("re12", "XML configuration hotfix", ass="Chris", cons="", resp="", stat="merged", pr="37449", flags="new-gm");
 
 
 // //----------------------------------------
-// AddCategory("direct simulation");
+AddCategory("direct simulation");
 
 // AddTask("ds1", "adjust Run3 alignment", pri="", ass="Jan", stat="merged", pr="35424", dep=deps("g2"), flags="new-gm");
 
 // AddTask("ds4", "backport to CMSSW 10\_6", pri="", ass="", stat="pending", resp="POG", due="", dep=deps(), comments="backport of features only available in 11\_X/12\_X to the release used for Run2 analyses");
 
+AddTask("ds5", "direct simulation as a standard sequence", pri="", ass="Laurent", stat="open", resp="POG", due="", dep=deps(), pr="38280", flags="new-swm" );
 
 
 //----------------------------------------
