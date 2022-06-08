@@ -55,15 +55,15 @@ AddTask("g25", "cleaning unused materials (DDD4HEP)", ass="Carl", cons="Gustavo"
 //----------------------------------------
 AddCategory("reconstruction");
 
-AddTask("re3", "update of N-F association cuts: class, DB infrastructure", ass="Grzegorz", cons="Jan", resp="", stat="merged", pr="35248", flags="new-gm");
+//AddTask("re3", "update of N-F association cuts: class, DB infrastructure", ass="Grzegorz", cons="Jan", resp="", stat="merged", pr="35248", flags="new-gm");
 
-AddTask("re4", "update of N-F association cuts: DB upload", ass="Wagner", cons="Jan", resp="", stat="done", pr="", flags="new-gm", dep=deps("re3"));
+//AddTask("re4", "update of N-F association cuts: DB upload", ass="Wagner", cons="Jan", resp="", stat="done", pr="", flags="new-gm", dep=deps("re3"));
 
 //AddTask("re5", "update of N-F association cuts: use DB by default", ass="Jan", cons="", resp="", stat="merged", pr="35766", flags="new-gm", dep=deps("re4"));
 
-AddTask("re7", "N-F association cuts: update GTs for data and MC", ass="Helena", cons="", resp="", stat="merged", pr="35914", flags="new-gm", dep=deps("re4"));
+//AddTask("re7", "N-F association cuts: update GTs for data and MC", ass="Helena", cons="", resp="", stat="merged", pr="35914", flags="new-gm", dep=deps("re4"));
 
-AddTask("re6", "N-F association cuts: bugfix for crash on DB read", ass="Jan", cons="", resp="", stat="merged", pr="35941", flags="new-gm", dep=deps("re7"));
+//AddTask("re6", "N-F association cuts: bugfix for crash on DB read", ass="Jan", cons="", resp="", stat="merged", pr="35941", flags="new-gm", dep=deps("re7"));
 
 AddTask("re8", "Calibration Record for HPTDC nonlinearities compensation", ass="Chris", cons="", resp="", stat="merged", pr="36537", flags="new-gm");
 
@@ -149,21 +149,21 @@ by default, this would be disabled, but available for private use
 
 
 //----------------------------------------
-AddCategory("framework");
+//AddCategory("framework");
 
-AddTask("fmw1", "UBSAN issue in TotemSampicFrame", ass="Chris", stat="merged", pr="35654", flags="new-gm", comments="
-details in \ulink{https://github.com/cms-sw/cmssw/issues/35012#issuecomment-937741753}{here}
-");
+//AddTask("fmw1", "UBSAN issue in TotemSampicFrame", ass="Chris", stat="merged", pr="35654", flags="new-gm", comments="
+//details in \ulink{https://github.com/cms-sw/cmssw/issues/35012#issuecomment-937741753}{here}
+//");
 
-AddTask("fmw2", "UBSAN issue in CTPPSPixelDigiToRaw", ass="Fabrizio", stat="merged", pr="35592", flags="new-gm", comments="
-details in \ulink{https://github.com/cms-sw/cmssw/issues/35012#issuecomment-937741753}{here}
-");
+//AddTask("fmw2", "UBSAN issue in CTPPSPixelDigiToRaw", ass="Fabrizio", stat="merged", pr="35592", flags="new-gm", comments="
+//details in \ulink{https://github.com/cms-sw/cmssw/issues/35012#issuecomment-937741753}{here}
+//");
 
-AddTask("fmw3", "migration of PoolDBOutput service to *IOV methods", ass="Fabrizio", stat="merged", pr="36180", flags="new-gm", comments="
-draft PR under review, mem leak details in \ulink{https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuidePoolDBOutputService}{here}
-");
+//AddTask("fmw3", "migration of PoolDBOutput service to *IOV methods", ass="Fabrizio", stat="merged", pr="36180", flags="new-gm", comments="
+//draft PR under review, mem leak details in \ulink{https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuidePoolDBOutputService}{here}
+//");
 
-AddTask("fmw4", "Cleaning EDModules implementation", ass="Fabrizio", stat="merged", pr="36960", flags="new-gm");
+//AddTask("fmw4", "Cleaning EDModules implementation", ass="Fabrizio", stat="merged", pr="36960", flags="new-gm");
 
 
 //----------------------------------------
