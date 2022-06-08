@@ -139,12 +139,12 @@ AddTask("pcl13", "renaming of AlCa reco producers for Tier0 replay", ass="Leszek
 AddTask("pcl14", "new AlCa reco producer support in PCL workers", ass="Mateusz", cons="AlCa", resp="AlCa", pr="37050", stat="merged", flags="new-gm", dep=deps("pcl11"));
 
 //----------------------------------------
-AddCategory("nanoAOD");
+//AddCategory("nanoAOD");
 
-AddTask("na2", "simu tracks and protons in nanoAOD", ass="Laurent", cons="", resp="POG", stat="merged", flags="new-gm", pr="36080", dep=deps(), comments="
-idea: run ``direct'' simu during nanoAOD production\\
-by default, this would be disabled, but available for private use
-");
+//AddTask("na2", "simu tracks and protons in nanoAOD", ass="Laurent", cons="", resp="POG", stat="merged", flags="new-gm", pr="36080", dep=deps(), comments="
+//idea: run ``direct'' simu during nanoAOD production\\
+//by default, this would be disabled, but available for private use
+//");
 
 
 
