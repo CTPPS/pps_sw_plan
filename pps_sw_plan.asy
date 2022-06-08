@@ -106,11 +106,11 @@ AddTask("dqm12", "use Run3 era in online DQM, fix in master", ass="Jan", stat="m
 
 AddTask("dqm13", "use Run3 era in online DQM, backport to 12\_0", ass="Jan", stat="merged", pr="35551", flags="new-gm", dep=deps("dqm12"));
 
-AddTask("val1", "more validation plots", ass="Jan", stat="merged", pr="35740", flags="new-gm", comments="details of N-F association efficiency, distances between tracks in each RP, t bias and resolution 2D histogram");
+//AddTask("val1", "more validation plots", ass="Jan", stat="merged", pr="35740", flags="new-gm", comments="details of N-F association efficiency, distances between tracks in each RP, t bias and resolution 2D histogram");
 
-AddTask("val2", "dLyds perturbation scenario for modified optics", ass="Frizi", stat="merged", pr="36039", flags="new-gm", comments="implemented in modified optics ES generator");
+//AddTask("val2", "dLyds perturbation scenario for modified optics", ass="Frizi", stat="merged", pr="36039", flags="new-gm", comments="implemented in modified optics ES generator");
 
-AddTask("val3", "fix to dLyds perturbation scenario (optics)", ass="Frizi", stat="merged", pr="36873", flags="new-gm", dep=deps("val2"));
+//AddTask("val3", "fix to dLyds perturbation scenario (optics)", ass="Frizi", stat="merged", pr="36873", flags="new-gm", dep=deps("val2"));
 
 //----------------------------------------
 AddCategory("PCLs");
